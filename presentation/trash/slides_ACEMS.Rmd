@@ -1,0 +1,388 @@
+---
+title: A framework for anomaly detection in river networks
+author: Puwasala Gamakumara
+date: "ACEMS Retreat 2021"
+classoption: compress
+toc: false
+header-includes:
+  \usepackage{amsmath, nccmath, graphicx}
+  \usepackage{bm}
+  \usepackage{mathpazo}
+  \usepackage{booktabs}
+  \usepackage{colortbl}
+  \usepackage{mathpazo}
+  \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+output: 
+  binb::monash:
+    fig_width: 8
+    fig_height: 6
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message=FALSE, 
+                      warning=FALSE, 
+                      cache=TRUE, 
+                      dev.args=list(bg=grey(0.9), 
+                                    pointsize=11))
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(kableExtra)
+library(gridExtra)
+
+```
+
+```{r external, include = FALSE, cache = FALSE}
+read_chunk('scr/scripts.R')
+```
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics('plots/team-members/Team_members.pdf')
+
+```
+
+## Water-quality monitoring in river networks
+
+- Low-cost in-situ sensors
+
+- Produce high-frequency data
+
+- Prone to errors due to miscalibration, biofouling, battery and technical errors
+
+### Objective
+
+- Developing statistical tools to detect anomalies in water-quality variables measured by in-situ sensors
+
+
+---
+
+
+
+
+## Proposed framework
+
+An anomaly is an observation that has an unexpectedly low conditional distribution
+
+```{r framework, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/Framework.pdf')
+
+```
+
+---
+
+### Pringle Creek - Texas, USA
+
+```{r pringle-creek-map, echo=FALSE, out.width="90%"}
+knitr::include_graphics('plots/Pringle-creek-map.png')
+```
+
+### Data 
+
+- **Variables** - Turbidity, Conductivity, Dissolved oxygen, Level and Temperature
+
+- **Time span** - 01-10-2019 to 31-12-2019
+
+- **Frequency** - 5 minute intervals
+
+---
+
+### Time plots
+
+```{r tsplots, echo=FALSE, out.width="100%"}
+
+# knitr::include_graphics('plots/Timeplots.png')
+
+```
+
+
+---
+
+### Turbidity downstream
+
+```{r turbplot, echo=FALSE, out.width="100%"}
+
+# knitr::include_graphics('plots/Timeplots_turbVsUpVars.pdf')
+
+```
+
+---
+
+## Modeling turbidity with upstream variables
+
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_downstream_t) \sim \sum_{i=1}^p f_i(log(turbidity\_downstream_{t-i})) + \\
+s_1(log(turbidity\_upstream_{t-d_t})) + \\
+s_2(conductance\_upstream_{t-d_t}) + \\
+s_3(level\_upstream_{t-d_t}) + \\
+s_4(temperature\_upstream_{t-d_t}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+- **Problem:** How to estimate $d_t$?
+
+
+---
+
+
+## Estimating lag time
+
+- Assume the lag time between two sensor locations depends on the upstream river behavior
+
+- Use *conditional cross-correlations* to estimate the lag time
+
+- let $x_t:$ Turbidity upstream, $y_t:$ Turbidity downstream and $\bm{z}_t:$ {level upstream, temperature upstream}
+
+- $x^*_t = \frac{x_t - \text{E}[x_t|\bm{z}_t]}{\sqrt{\text{V}[x_t|\bm{z}_t]}}$ and
+  $y^*_t = \frac{y_t - \text{E}[y_t|\bm{z}_t]}{\sqrt{\text{V}[y_t|\bm{z}_t]}}$
+
+---
+
+<!-- ### Methodology -->
+
+<!-- - Use conditional cross-correlations to predict the time delay -->
+
+<!-- - Let $x_t$ and $y_t$ be water-quality variables observed at upstream and downstream sensors, -->
+<!-- and $\bm{z}_t$ be other set of variables observed at upstream sensor at times $t = 1,2,...,T$ -->
+
+<!-- - $x^*_t = \frac{x_t - \text{E}[x_t|\bm{z}_t]}{\sqrt{\text{V}[x_t|\bm{z}_t]}}$ and -->
+<!--   $y^*_t = \frac{y_t - \text{E}[y_t|\bm{z}_t]}{\sqrt{\text{V}[y_t|\bm{z}_t]}}$ -->
+
+
+
+<!-- --- -->
+
+### Conditional cross-correlation
+
+$$
+r_k(\bm{z}_t) = \text{E}[x_t^*y^*_{t+k}|\bm{z}_t] \quad \text{for} \quad k = 1,2,...
+$$
+
+- To estimate $r_k(\bm{z}_t)$ we fit the following GAMs
+
+- Let $x_t^*y^*_{t+k}|\bm{z}_t \sim \text{N}(r_k(\bm{z}_t), \sigma_r^2)$, 
+
+$$
+g(r_k(\bm{z}_t)) = \gamma_0 + \sum_{i=1}^p h_i(z_{i,t}) + \varepsilon_t
+$$
+
+
+$$
+\hat{r}_k(\bm{z}_t) = g^{-1}( \hat{\gamma}_0 + \sum_{i=1}^p \hat{h}_i(z_{i,t}))
+$$
+
+### Estimating time delay
+
+$$
+\hat{d}_{t}(\bm{z}_t) = \underset{k}{\operatorname{argmax}}\quad \hat{r}_{k}(\bm{z}_t)
+$$
+
+
+
+## Visualising dt vs predictors
+
+```{r vis_dt, echo=FALSE, fig.width=8, fig.height=6}
+
+knitr::include_graphics('plots/vis_dt.pdf')
+
+```
+
+---
+
+## Back to our GAM for turbidity downstream
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_downstream_t) \sim \sum_{i=1}^3 f_i(log(turbidity\_downstream_{t-i})) + \\
+s_1(log(turbidity\_upstream_{t-d_t})) + \\
+s_2(conductance\_upstream_{t-d_t}) + \\
+s_3(level\_upstream_{t-d_t}) + \\
+s_4(temperature\_upstream_{t-d_t}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+---
+
+### Residuals from the GAM
+
+```{r vis_resid, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/GAM_AR_residuals.pdf')
+
+```
+
+- We use Peak-Over-Threshold method to estimate the outlier threshold
+
+---
+
+### Performance Evaluation
+```{r conf_matrix, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/classification_model_up_AR.pdf')
+
+```
+
+
+```{r echo=FALSE, out.width="100%"}
+library(kableExtra)
+
+load('plots/confusion_mod_up_AR.rda')
+
+options(scipen = 999)
+confusion_mod_up_AR <- confusion_mod_up_AR %>%
+  mutate(Accuracy = round(accuracy, digits = 4),
+         "Error rate" = round(ER, digits = 4),
+         "Optimised Precision" = round(OP, digits = 4)) %>% 
+  select(method, TP, TN, FP, FN)
+
+confusion_mod_up_AR %>% 
+  kableExtra::kable(format = "latex", booktabs = T) %>%
+  kableExtra::kable_styling(font_size = 6.75) %>% 
+  column_spec(1, bold = T) %>% 
+  row_spec(0, bold = T)
+
+```
+
+## Comparison 
+
+### GAM_up
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_down_t) \sim  
+s_1(log(turbidity\_up_{t-d_t}))\\ + 
+s_2(conductance\_up_{t-d_t}) + 
+s_3(level\_up_{t-d_t})\\ + 
+s_4(temperature\_up_{t-d_t}) + 
+s_5(do\_up_{t-d_t}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+### GAM_down
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_down_t) \sim  
+g_1(conductance\_down_{t-1})\\ + 
+g_2(level\_down_{t-1}) + 
+g_3(temperature\_down_{t-1}) \\ 
++ g_4(do\_down_{t-1}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+### GAM_up_down
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_down_t) \sim 
+    h_1(log(turbidity\_up_{t-d_t}))\\ +             h_2(conductance\_up_{t-d_t}) + 
+h_3(do\_up_{t-d_t})\\ + 
+h_4(level\_up_{t-d_t}) + 
+h_5(temperature\_up_{t-d_t})\\ + 
+h_6(conductance\_down_{t-1}) + 
+h_7(temperature\_down_{t-1}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+---
+
+##### Recall models
+- GAM-up-AR: GAM with upstream predictors and lagged response
+- GAM-up: GAM with upstream predictors
+- GAM-down: GAM with downstream predictors
+- GAM-up-down: GAM with upstream and downstream predictors
+
+### Comparison
+
+
+```{r echo=FALSE}
+
+load('plots/tbl_comparison.rda')
+
+tbl_comparison <- tbl_comparison %>%
+  mutate(Accuracy = round(accuracy, digits = 4),
+         "Error Rate" = round(ER, digits = 4),
+         "Optimised Precision" = round(OP, digits = 4)) %>% 
+  select(method, TP, TN, FP, FN, Accuracy, `Error Rate`, 
+         `Optimised Precision`)
+
+tbl_comparison %>%
+  kableExtra::kbl(format = "latex", booktabs = T) %>%
+  kable_styling(font_size = 7, latex_options="scale_down") %>% 
+  column_spec(1, bold = T) %>% 
+  row_spec(0, bold = T) %>% 
+  row_spec(1, color = "red")
+
+
+
+```
+
+
+
+
+
+## Working papers and R packages
+
+### Working papers
+
+- Conditional Normalisation in Time Series Analysis
+- Anomaly Detection in River Networks
+
+### R packages
+
+- **`conduits`** (Conditional UI for Time Series normalisation) - https://github.com/PuwasalaG/conduits
+
+- **`dori`** (Data for Outlier Detection in River networks) 
+
+---
+
+### Acknowledgement
+- ARC Linkage project - “Revolutionising high resolution water-quality monitoring in the information age”. 
+
+- Department of Environment and Science, Queensland
+
+
+---
+
+<!-- ### SPOT algorithm -->
+
+<!-- \begin{algorithm} -->
+<!-- \DontPrintSemicolon -->
+<!-- \SetAlgoLined -->
+<!-- \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output} -->
+<!-- \Input{$\{r_1,\dots,r_T\}$, $n, \alpha,$ and $p_u$} -->
+<!-- \Output{Flagged residuals} -->
+<!-- \BlankLine -->
+<!-- Using $\bm{r}_n = |r_1|,\dots,|r_n|$, compute $u$ as the $p_u*100\%^\text{th}$ percentile\; -->
+<!-- Using POT approach, fit a GPD to the excesses over $u$ to estimate  -->
+<!-- $\xi$ and $\sigma$ following Section \ref{sec:init_thresh}\; -->
+<!-- Compute $\tau_{\alpha}$ as the $(1-\alpha)*100\%^\text{th}$ percentile from the fitted GPD with the parameter estimates $\hat{\xi}$ and $\hat{\sigma}$\; -->
+<!-- \If {$|r_i|>\tau_{\alpha}$ for $i = 1,\dots,n$} { -->
+<!--   Flag $r_i$ as an outlier\; -->
+<!--   Remove $r_i$ from $\bm{r}_n$, re-calibrate $\tau_{\alpha}$ following steps 2 and 3 \; -->
+<!--   }  -->
+<!-- \BlankLine -->
+<!-- \For{$i>n$}{ -->
+<!--     \uIf{$|r_i|>\tau_{\alpha}$}{ -->
+<!--         Flag $r_i$ as an outlier -->
+<!--     }\uElseIf{$|r_i|>u$}{ -->
+<!--         Flag $r_i$ as a typical point\; -->
+<!--         Add $|r_i|$ to $\bm{r}_n$\; -->
+<!--         Estimate the GPD parameters $\xi, \sigma$ following Section \ref{sec:init_thresh}\; -->
+<!--         Compute $\tau_{\alpha}$\; -->
+<!--     }\Else{ -->
+<!--       Flag $r_i$ as a typical point\; -->
+<!--     } -->
+<!-- } -->
+<!-- \end{algorithm} -->

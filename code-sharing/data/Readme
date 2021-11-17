@@ -1,0 +1,9 @@
+Description of the data files
+
+see https://github.com/PuwasalaG/Conditional_normalisation_in_TSA/tree/master/Paper/data-raw for the scripts
+* PRIN_5min_cleaned.rda: cleaned (anomaly removed) and aggregate into 5 mint intervals
+* PRIN_5min_flagged.rda: flagged data, aggregate into 5 mint intervals
+
+see weird_river_data_paper/src/lag_time_estimation for the scripts
+* data_lagged_upstream: lagged upstream variables based on lag time estimation
+* data_downstream_imputed: downstream cleaned data - missing values are imputed

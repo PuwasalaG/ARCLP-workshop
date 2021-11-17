@@ -1,0 +1,204 @@
+---
+title: Outlier Detection in Water Quality Variables Utilising the Temporal Correlation
+subtitle: Importance of having multiple sensors close to each other
+author: Puwasala Gamakumara
+date: \today
+classoption: compress
+toc: false
+header-includes:
+  \usepackage{amsmath, nccmath, graphicx}
+  \usepackage{bm}
+  \usepackage{mathpazo}
+output: 
+  binb::monash:
+    fig_width: 8
+    fig_height: 6
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      message=FALSE, 
+                      warning=FALSE, 
+                      cache=TRUE, 
+                      dev.args=list(bg=grey(0.9), 
+                                    pointsize=11))
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(kableExtra)
+```
+
+## Anomaly detection framework
+
+```{r framework, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/Framework.pdf')
+
+```
+
+<!-- ## Why multiple sensors? -->
+
+<!-- ### Outlier detection -->
+<!-- - Single sensor may not be able to detect certain type of anomalies -->
+<!-- - If the sensors are malfunctioning, then the covariates or lagged values of them may be incorrect -->
+
+<!-- ### Importance of replication -->
+<!-- - Uncertain measurements or unreliable equipment -->
+<!-- - It's important to have replications to measure uncertainty and bias -->
+
+<!-- --- -->
+
+<!-- ### Other places where use multiple sensors  -->
+
+<!-- - NEON uses two sensors (about 200m apart) to measure water quality variables -->
+
+<!-- - They initially design this to calculate stream metabolism -->
+
+<!-- - They show that having multiple sensors is important for anomaly detection -->
+
+
+<!-- --- -->
+
+
+
+
+<!-- - We model the downstream variable using related upstream variables -->
+
+<!-- - It's important to calculate the lag time between the two sensors -->
+
+<!-- - Using cross-correlation methods to calculate lag time -->
+
+<!-- - We then use the residuals from this model to detect outliers -->
+
+<!-- - Finally we compare that with the residuals from a model that uses only the variables from downstream sensor -->
+
+---
+
+
+### Data
+
+- Pringle Creek - Texas, USA
+
+- Two sensor locations ($200m$ apart)
+
+- **Variables available** - Turbidity, Conductivity, Level and Temperature
+
+- **Time span** - 01-10-2019 to 31-12-2019
+
+- **Frequency** - 5 minute intervals
+
+---
+
+### Time plots
+
+```{r timeplots, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/Timeplots.pdf')
+
+```
+
+
+---
+
+### Turbidity downstream
+
+```{r turbplot, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/Turbidity_downstream.pdf')
+
+```
+
+---
+
+### Model - 1
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_downstream_t) \sim  
+s_1(log(turbidity\_upstream_{t-d_t}))\\ + s_2(conductance\_upstream_{t-d_t}) + 
+s_3(level\_upstream_{t-d_t})\\ + 
+s_4(temperature\_upstream_{t-d_t}) + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+### Model - 2
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_downstream_t) \sim  
+s_2(conductance\_dowstream_{t-1})\\ + 
+s_3(level\_downstream_{t-1}) + 
+s_4(temperature\_downstream_{t-1}) \\ + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+### Model - 3
+
+\begin{gather}
+\scalebox{0.75}{$
+   \begin{align*}
+    log(turbidity\_downstream_t) \sim 
+    s_1(log(turbidity\_upstream_{t-d_t}))\\ + s_2(conductance\_upstream_{t-d_t}) + 
+s_3(level\_upstream_{t-d_t})\\ + 
+s_4(temperature\_upstream_{t-d_t}) + 
+s_5(conductance\_downstream_{t-1})\\ + 
+s_6(level\_downstream_{t-1}) + 
+s_7(temperature\_downstream_{t-1}) \\ + \epsilon_t
+   \end{align*}$}
+\end{gather}
+
+---
+
+### Residuals from the three models
+
+```{r vis_resid, echo=FALSE, fig.width=6, fig.height=4}
+
+knitr::include_graphics('plots/plot_residuals.pdf')
+
+```
+
+- We use Peak-Over-Threshold method to estimate the outlier threshold
+
+---
+
+## Results
+
+```{r echo=FALSE}
+library(kableExtra)
+
+load(here::here("ARCLP-DES-Catchup","Meeting-3", "plots", "confussion_matrix.rda"))
+
+confussion_matrix %>% 
+  kable() %>% 
+  kable_styling(font_size = 8) %>% 
+  row_spec(0,bold=TRUE)
+  
+```
+
+```{r conf_matrix, echo=FALSE, fig.width=5, fig.height=3, out.width="80%"}
+
+knitr::include_graphics('plots/outliers_turbidity_model3.pdf')
+
+```
+
+<!-- ## Articles and R packages -->
+
+<!-- ### Articles -->
+
+<!-- - Conditional Normalisation in Time Series Analysis -->
+<!-- - Anomaly Detection in River Networks -->
+
+<!-- ### R packages -->
+
+<!-- - **`conduits`** (Conditional UI for Time Series normalisation) - https://github.com/PuwasalaG/conduits -->
+
+<!-- - **`dori`** (Data for Outlier Detection in River networks) - https://github.com/pridiltal/dori -->
+
+
+
+
+

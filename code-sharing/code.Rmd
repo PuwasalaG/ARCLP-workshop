@@ -1,0 +1,315 @@
+---
+title: "Anomaly detection in river networks"
+author: "Puwasala Gamakumara"
+date: "17/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  cache = TRUE,
+  fig.height = 6,
+  fig.width = 7)
+
+library(tidyverse)
+library(lubridate)
+library(conduits)
+library(mgcv)
+```
+
+
+# Data
+
+```{r load}
+
+load(here::here("code-sharing", "data", "PRIN_5min_cleaned.rda"))
+load(here::here("code-sharing", "data", "PRIN_5min_flagged.rda"))
+```
+
+We choose data from 01-Oct-2019 to 31-Dec-2019
+
+```{r preparing-data}
+PRIN_5min_flagged <- PRIN_5min_flagged %>%
+  rename(
+    Timestamp = roundedTimestamp,
+    level = surfacewaterElevMean,
+    conductance = specificConductance,
+    dissolved_oxygen = dissolvedOxygen,
+    temperature = surfWaterTempMean
+  ) %>%
+  filter(Timestamp >= ymd("2019-10-01") & 
+           Timestamp < ymd("2020-01-01")) %>% 
+  mutate(Timestamp = ymd_hms(Timestamp))
+
+PRIN_5min_cleaned <- PRIN_5min_cleaned %>%
+  rename(
+    Timestamp = roundedTimestamp,
+    level = surfacewaterElevMean,
+    conductance = specificConductance,
+    dissolved_oxygen = dissolvedOxygen,
+    temperature = surfWaterTempMean
+  ) %>%
+  filter(Timestamp >= ymd("2019-10-01") & 
+           Timestamp < ymd("2020-01-01")) %>% 
+  mutate(Timestamp = ymd_hms(Timestamp))
+
+
+```
+
+Visualising raw data 
+
+```{r raw-data-plot}
+PRIN_5min_flagged %>% 
+  select(Timestamp, turbidity, conductance, dissolved_oxygen,
+         level, temperature, site) %>% 
+  pivot_longer(-c(Timestamp, site)) %>% 
+  ggplot(aes(Timestamp, value, color = site)) +
+  geom_line() +
+  facet_wrap(~name, scales = "free_y", ncol = 1)
+```
+
+# Anomaly detection in downstream Turbidity
+
+Pre-identified anomalies in Turbidity
+
+```{r fig.height=4}
+
+Turbidity_down <- PRIN_5min_flagged %>% 
+  filter(site == "down") %>% 
+  select(Timestamp, turbidity, turbidityAnomalyFlag) %>% 
+  rename("turbidity_downstream" = turbidity)
+
+Turbidity_down %>% 
+  ggplot(aes(Timestamp, turbidity_downstream)) +
+  geom_point(size = 0.5) +
+  geom_point(data = Turbidity_down %>% 
+               filter(turbidityAnomalyFlag == 1),
+             aes(Timestamp, turbidity_downstream), 
+             color = "red", 
+             shape = 17,
+             size = 2)
+```
+
+## Using single sensor data
+
+Suppose we are using data from a single sensor. Then we model the downstream turbidity using contemporaneous variables measured in the same sensor location. 
+
+
+```{r downstream_scatter}
+
+data_downstream <- PRIN_5min_flagged %>%
+  filter(site == "down") %>% 
+  select(Timestamp, turbidity, conductance, dissolved_oxygen,
+         pH, level, temperature)
+  
+data_downstream %>% 
+  select(-Timestamp) %>% 
+  GGally::ggpairs()
+    
+    
+```
+
+We choose level, temperature, conductance and dissolved oxygen to model the downstream turbidity. We impute any missing values in the predictors prior to the analysis. I have used a Kalman filter based on ARIMA state-space model for imputation. The codes for this can be found here \textcolor{red}{give link to the .r file} 
+
+First divide the data into training set (01-Oct-2019 to 30-Nov-2019) and test set (01-Dec-2019 to 31-Dec-2019). We use the training set to train the model. We remove all any outliers we identified as the model needs to be trained in a cleaned dataset. 
+
+We fit the model on the log scale of turbidity as the data are very skewed.
+```{r prepare-data-downstream}
+
+load(here::here("code-sharing", "data", 
+                "data_downstream_imputed.rda"))
+
+data_downstream_imputed <- data_downstream_imputed %>% 
+  select(-turbidity_downstream) %>% 
+  left_join(Turbidity_down) %>% 
+  mutate(turbidity_downstream_log = log(turbidity_downstream),
+         turbidity_downstream_log_lag1 = lag(turbidity_downstream_log, 1),
+         turbidity_downstream_log_lag2 = lag(turbidity_downstream_log, 2),
+         turbidity_downstream_log_lag3 = lag(turbidity_downstream_log, 3))
+
+data_train <- data_downstream_imputed %>%
+  filter(Timestamp >= ymd("2019-10-01")
+         & Timestamp < ymd("2019-12-01"))
+
+
+# We will remove the anomalies in the turbidity_downstream in training data
+data_train <- data_train %>%
+  mutate(turbidity_downstream = if_else(turbidityAnomalyFlag=="outlier",
+                                        as.numeric(NA),
+                                        turbidity_downstream))
+
+
+```
+
+
+```{r gam-down-AR}
+
+gam_down_AR <- gam(turbidity_downstream_log ~
+                     s(turbidity_downstream_log_lag1) +
+                     s(conductance_downstream) +
+                     s(dissolved_oxygen_downstream) +
+                     s(level_downstream, k=6) +
+                     s(temperature_downstream),
+                   data = data_train)
+
+summary(gam_down_AR)
+
+visreg::visreg(gam_down_AR, plot = FALSE) %>% 
+  purrr::map(function(x){plot(x, gg = TRUE) + theme_bw()}) %>% 
+  gridExtra::marrangeGrob(ncol = 2, nrow = 3)
+
+residuals <- gam_down_AR$residuals
+forecast::ggtsdisplay(residuals, plot.type = "histogram")
+
+```
+
+We next get the predictions from the fitted model and compare that with the realisation. That is, we compute the residuals such that, 
+$r_t = \text{log}(turbidity(down))_t - \hat{\text{log}(turbidity(down))}_t$ where $\hat{\text{log}(turbidity(down))}_t$ are the predictions from the fitted model. 
+
+```{r get_resids_gam_down_AR}
+data_residuals <- data_downstream_imputed%>%
+  select(Timestamp, 
+         turbidity_downstream, 
+         turbidity_downstream_log,
+         turbidityAnomalyFlag) %>%
+  mutate(predict_mod_down_AR = as.numeric(predict.gam(gam_down_AR, 
+                                                      newdata = data_downstream_imputed)),
+         residuals_down_AR = turbidity_downstream_log -
+           predict_mod_down_AR,
+         turbidityAnomalyFlag = case_when(turbidityAnomalyFlag == 0 ~ "typical",
+                                          turbidityAnomalyFlag == 1 ~ "outlier",
+                                          TRUE ~ as.character(NA)))
+
+```
+
+Using SPOT to detect anomalies in the residuals. \textcolor{give link to the functions here}
+
+```{r SPOT-gam-down-AR}
+source(here::here("code-sharing", "src", "SPOT_algorithm.R"))
+
+q <- 0.01
+t_prob <- 0.98
+n = floor(nrow(data_residuals)*0.30) # first 30% of the data (might contain missing values)
+
+confusion_mod_down_AR <- compute_confusion(data = data_residuals,
+                                           residuals = "residuals_down_AR",
+                                           name = "model_down_AR", 
+                                           n = n,
+                                           q = q, 
+                                           t_prob = t_prob,
+                                           cmax = FALSE)
+
+confusion_mod_down_AR <- confusion_mod_down_AR %>%
+  rename(AnomalyFlag_SPOT_down_AR = AnomalyFlag_SPOT,
+         confusion_mod_down_AR = confusion_matrix)
+data_residuals <- data_residuals %>%
+  left_join(confusion_mod_down_AR, by = "Timestamp")
+
+```
+
+```{r eval-gam-down-AR}
+classif_plot_turb_down_AR <- data_residuals %>%
+  select(Timestamp, turbidity_downstream, confusion_mod_down_AR) %>%
+  mutate(confusion_mod_down_AR = factor(confusion_mod_down_AR,
+                                        levels = c("TP", "TN", "FP", "FN",
+                                                   "NA"))) %>%
+  drop_na() %>%
+  ggplot() +
+  geom_point(aes(Timestamp, turbidity_downstream,
+                 color = confusion_mod_down_AR,
+                 shape = confusion_mod_down_AR,
+                 size = confusion_mod_down_AR,
+                 alpha = confusion_mod_down_AR)) +
+  scale_color_manual(values = c("#009E73", "#999999", "#E69F00",
+                                "#FF3333")) +
+  scale_shape_manual(values = c(17,16,18,15)) +
+  scale_size_manual(values = c(2,0.3,2,2)) +
+  scale_alpha_manual(values = c(1,1,1,1)) +
+  theme(legend.title = element_blank(), legend.position = "bottom") +
+  ylab("Turbidity (FNU)")
+
+calib_time <- data_residuals %>% 
+  slice(1:n) %>% 
+  pull(Timestamp)
+
+TP_time <- data_residuals %>% 
+  filter(confusion_mod_down_AR == "TP") %>% 
+  pull(Timestamp)
+
+TN_time <- data_residuals %>% 
+  filter(confusion_mod_down_AR == "TN") %>% 
+  pull(Timestamp)
+
+FP_time <- data_residuals %>% 
+  filter(confusion_mod_down_AR == "FP") %>% 
+  pull(Timestamp)
+
+FN_time <- data_residuals %>% 
+  filter(confusion_mod_down_AR == "FN") %>% 
+  pull(Timestamp)
+
+
+classif_plot_resid_down_AR <- data_residuals %>%
+  select(Timestamp, residuals_down_AR) %>%
+  drop_na() %>%
+  ggplot() +
+  geom_point(data = data_residuals %>% 
+               filter(Timestamp %in% calib_time),
+             aes(Timestamp, residuals_down_AR), 
+             color = "#000000",
+             shape = 16,
+             size = 0.3,
+             alpha = 0.3) +
+  geom_point(data = data_residuals %>% 
+               filter(Timestamp > max(calib_time) &
+                        Timestamp %in% TN_time),
+             aes(Timestamp, residuals_down_AR),
+             color = "#999999",
+             shape = 16,
+             size = 0.3,
+             alpha = 0.3) +
+  geom_point(data = data_residuals %>% 
+               filter(Timestamp %in% TP_time),
+             aes(Timestamp, residuals_down_AR),
+             color = "#009E73",
+             shape = 17,
+             size = 2) +
+  geom_point(data = data_residuals %>% 
+               filter(Timestamp %in% FP_time),
+             aes(Timestamp, residuals_down_AR),
+             color = "#E69F00",
+             shape = 18,
+             size = 2) +
+  geom_point(data = data_residuals %>% 
+               filter(Timestamp %in% FN_time),
+             aes(Timestamp, residuals_down_AR),
+             color = "#FF3333",
+             shape = 15,
+             size = 2) +
+  ylab("residuals")
+
+library(patchwork)
+classif_plot_turb_down_AR / classif_plot_resid_down_AR
+```
+This model correctly classifies all true outliers. 
+However, there are considerable amount of False Positives too. 
+
+# Using multiple sensor data
+
+Suppose we have a flow connected sensor upstream. We can use data from that sensor to predict downstream turbidity series.
+
+We first have to calculate the lag time (i.e. the time it takes to flow from upstream to downstream sensor) between the two sensor locations. We find this lag time by maximising the conditional cross-correlation between the two sensors. 
+
+## Lag time estimation
+
+In this application we choose to use turbidity from upstream sensor and downstream to calculate the cross-correlations conditional on upstream water level and temperature. 
+
+We first have to use a cleaned data set to compute the models. If necessary we can also impute missing values. Please refer \textcolor{red}{give link here} to see 
+```{r}
+
+```
+
+
