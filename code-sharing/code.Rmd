@@ -305,11 +305,120 @@ We first have to calculate the lag time (i.e. the time it takes to flow from ups
 
 ## Lag time estimation
 
-In this application we choose to use turbidity from upstream sensor and downstream to calculate the cross-correlations conditional on upstream water level and temperature. 
+In this application we choose to use turbidity from upstream and downstream sensors to calculate the cross-correlations conditional on upstream water level and temperature. 
 
-We first have to use a cleaned data set to compute the models. If necessary we can also impute missing values. Please refer \textcolor{red}{give link here} to see 
-```{r}
+We first have to use a cleaned data set to compute the models. If necessary we also impute missing values. Please refer [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/missing_value_imputation.R] to see missing value imputation of each series.
+
+
+```{r prep_data_lag_estim}
+load(here::here("code-sharing", "data", 
+                "data_downstream_imputed.rda"))
+
+data_xz <- data_upstream_imputed %>% 
+  select(Timestamp, level_upstream, temperature_upstream,
+         turbidity_upstream)
+
+data_y <- data_downstream_imputed %>% 
+  select(Timestamp, turbidity_downstream)
+
+data_lag_estim <- data_xz %>% 
+  left_join(data_y, by = "Timestamp") %>% 
+  mutate(turbidity_upstream = if_else(turbidity_upstream == 0, 
+                                      as.numeric(NA), 
+                                      turbidity_upstream))
 
 ```
 
+
+```{r Conditional-cross-correlation}
+mean <- c(5,5)
+variance <- c(4,4)
+correlation <- c(3,3)
+
+# we choose level and temperature for lag time estimation in this analysis
+?conduits::conditional_ccf
+
+cond_ccf <- data_lag_estim %>%
+  conduits::conditional_ccf(x = turbidity_upstream,
+                            y = turbidity_downstream,
+                            z_numeric = c(level_upstream, 
+                                          temperature_upstream),
+                            k = 1:24,
+                            knots_mean = list(x = mean, 
+                                              y = mean),
+                            knots_variance = list(x = variance, 
+                                                  y = variance),
+                            df_correlation = correlation)
+
+autoplot(cond_ccf, type = "mean")
+autoplot(cond_ccf, type = "cross-correlation")
+```
+
+```{r estimate_dt}
+?conduits::estimate_dt
+
+Estimate_dt <- cond_ccf %>% 
+  estimate_dt(new_data = data_lag_estim, k_min = 1, 
+              k_max = 24)
+
+Estimate_dt$data_dt
+
+```
+
+```{r plot-ccf-dt-pval}
+insig_times <- Estimate_dt$data_dt %>% 
+  filter(pvalue > 0.01) %>% 
+  pull(Timestamp)
+
+df1 <- Estimate_dt$data_dt %>% 
+  select(Timestamp, dt, ccf, pvalue) %>% 
+  pivot_longer(-Timestamp) 
+  
+
+df1 %>% 
+  mutate(name = factor(name, levels = c("dt", "ccf", "pvalue"))) %>% 
+  ggplot(aes(Timestamp, value)) +
+  geom_line() +
+  geom_point(data = df1 %>% 
+              filter(Timestamp %in% insig_times), 
+            aes(Timestamp, value), color = "red", size = 0.3) +
+  facet_wrap(~name, ncol = 1, scales = "free_y")
+
+```
+
+The red points in \ref{fig:plot-ccf-dt-pval} shows the insignificant ccfs. We can replace these with an appropriate value before computing lagged upstream variables. 
+
+```{r vis_dt}
+autoplot(object = Estimate_dt, m=1000, seed = 1989, 
+                    interval = FALSE)
+```
+
+```{r Replacing-insignificant-lags}
+
+
+# Finding the lag that gives maximum cross correlation 
+# between between xt and y_t+k for k = 1,...,24
+
+Time <- data_xz$Timestamp
+Y_leads <- purrr::map(1:24, ~dplyr::lead(data_y$turbidity_downstream, 
+                                      n = .x))
+names(Y_leads) <- paste("Y_", 1:24, sep = "")
+
+Y_leads <- Y_leads %>%
+    tibble::as_tibble()
+
+X <- data_xz %>% dplyr::pull(turbidity_upstream)
+
+func_ccf <- function(y, x){
+    cor(y,x, use = "complete.obs")
+  }
+
+max_lag_ccf <- apply(Y_leads, 2, FUN = func_ccf, x = X) %>% 
+  which.max()
+
+
+data_dt <- Estimate_dt$data_dt %>% 
+  mutate(dt = if_else(pvalue > 0.01, as.numeric(max_lag_ccf), dt))
+
+```
 

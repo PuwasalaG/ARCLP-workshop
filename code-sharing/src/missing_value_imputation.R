@@ -16,7 +16,7 @@ library(imputeTS)
 
 ## ---- loadPRINData
 # Pringle Creek in Texas
-load(here::here("weird_river_data_paper", "data", "PRIN_5min_cleaned.rda"))
+load(here::here("code-sharing", "data", "PRIN_5min_cleaned.rda"))
 PRIN_5min_cleaned <- PRIN_5min_cleaned %>%
   rename(
     Timestamp = roundedTimestamp,
@@ -150,7 +150,9 @@ data_upstream_imputed <- data_upstream_imputed %>%
                                       turbidity_upstream))
 
 
-
+save(data_upstream_imputed, file = here::here("code-sharing",
+                                              "data",
+                                              "data_upstream_imputed.rda"))
 
 ## --Imputation - Downstream sensor--
 
