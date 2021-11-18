@@ -1,5 +1,5 @@
 ---
-title:  A framework for detecting anomalies in water-quality variables via conditional density estimation
+title:  A framework for detecting anomalies in water-quality variables
 
 subtitle: Importance of having multiple sensors close to each other
 author: Puwasala Gamakumara
@@ -56,14 +56,8 @@ read_chunk(here::here("presentation",
 
 ## Why multiple sensors?
 
-### Outlier detection
 - Single sensor may not be able to detect certain type of anomalies
 - If the sensors are malfunctioning, then the covariates or lagged values of them may be incorrect
-
-### Importance of replication
-- Uncertain measurements or unreliable equipment
-- It's important to have replications to measure uncertainty and bias
-
 
 # Framework
 
@@ -80,19 +74,21 @@ knitr::include_graphics(here::here("presentation",
 
 # Data
 
-### Pringle Creek - Texas, USA
+## Pringle Creek - Texas, USA
 
-```{r pringle-creek-map, echo=FALSE, out.width="90%"}
+```{r pringle-creek-map, echo=FALSE, out.width="100%", fig.cap="image courtesy neonscience.org"}
 knitr::include_graphics('plots/Pringle-creek-map.png')
 ```
 
-### Data 
+## Data 
 
 - **Variables** - Turbidity, Conductivity, Dissolved oxygen, Level and Temperature
 
 - **Time span** - 01-10-2019 to 31-12-2019
 
 - **Frequency** - 5 minute intervals
+
+- [https://data.neonscience.org/data-products]
 
 ---
 
@@ -136,9 +132,6 @@ y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
 * **GAM-up-down:** Upstream lagged variables + Downstream contemporaneous variables
 
 
-
-# Lag time estimation
-
 ## Lag time estimation
 
 - Assume the lag time between two sensor locations depends on the upstream river behavior
@@ -181,19 +174,19 @@ $$
 
 ---
 
-```{r plot_ccf_dt_pval, fig.height=4, out.width="100%"}
+```{r plot_ccf_dt_pval, out.width="100%"}
 
 knitr::include_graphics('plots/plot_ccf_dt_pval.pdf')
 ```
 
 ---
 
-```{r vis_dt, fig.height=4, out.width="100%"}
+```{r vis_dt, out.width="100%"}
 
 knitr::include_graphics('plots/vis_dt.pdf')
 ```
 
-# Outlier detection
+# Outlier detection based on Extreme value theory
 
 ## Outlier detection using Peak over Threshold method
 
@@ -215,7 +208,9 @@ knitr::include_graphics('plots/vis_dt.pdf')
 
 ---
 
-## Comparison
+# Evaluation
+
+## Performance Evaluation
 
 ```{r model-comparison}
 
