@@ -399,23 +399,16 @@ autoplot(object = Estimate_dt, m=1000, seed = 1989,
 # Finding the lag that gives maximum cross correlation 
 # between between xt and y_t+k for k = 1,...,24
 
-Time <- data_xz$Timestamp
-Y_leads <- purrr::map(1:24, ~dplyr::lead(data_y$turbidity_downstream, 
-                                      n = .x))
-names(Y_leads) <- paste("Y_", 1:24, sep = "")
+ccf_vec <- numeric()
 
-Y_leads <- Y_leads %>%
-    tibble::as_tibble()
+for (i in 1:24) {
+  ccf_vec[i] <- cor(data_xz$turbidity_upstream,
+                   lead(data_y$turbidity_downstream, 
+                        n = i), 
+                   use = "complete.obs")
+}
 
-X <- data_xz %>% dplyr::pull(turbidity_upstream)
-
-func_ccf <- function(y, x){
-    cor(y,x, use = "complete.obs")
-  }
-
-max_lag_ccf <- apply(Y_leads, 2, FUN = func_ccf, x = X) %>% 
-  which.max()
-
+max_lag_ccf <- which.max(ccf_vec)
 
 data_dt <- Estimate_dt$data_dt %>% 
   mutate(dt = if_else(pvalue > 0.01, as.numeric(max_lag_ccf), dt))
