@@ -1,0 +1,1737 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.24)  27 NOV 2021 01:44
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**slides.tex
+(./slides.tex
+LaTeX2e <2021-11-15>
+L3 programming layer <2021-11-22>
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamer.c
+ls
+Document Class: beamer 2021/10/18 v3.64 A class for typesetting presentations
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+semodes.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolb
+ox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count183
+)
+\beamer@tempbox=\box50
+\beamer@tempcount=\count184
+\c@beamerpauses=\count185
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+sedecode.sty
+\beamer@slideinframe=\count186
+\beamer@minimum=\count187
+\beamer@decode@box=\box51
+)
+\beamer@commentbox=\box52
+\beamer@modecount=\count188
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifpdf.s
+ty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.s
+ty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\headdp=\dimen138
+\footheight=\dimen139
+\sidebarheight=\dimen140
+\beamer@tempdim=\dimen141
+\beamer@finalheight=\dimen142
+\beamer@animht=\dimen143
+\beamer@animdp=\dimen144
+\beamer@animwd=\dimen145
+\beamer@leftmargin=\dimen146
+\beamer@rightmargin=\dimen147
+\beamer@leftsidebar=\dimen148
+\beamer@rightsidebar=\dimen149
+\beamer@boxsize=\dimen150
+\beamer@vboxoffset=\dimen151
+\beamer@descdefault=\dimen152
+\beamer@descriptionwidth=\dimen153
+\beamer@lastskip=\skip47
+\beamer@areabox=\box53
+\beamer@animcurrent=\box54
+\beamer@animshowbox=\box55
+\beamer@sectionbox=\box56
+\beamer@logobox=\box57
+\beamer@linebox=\box58
+\beamer@sectioncount=\count189
+\beamer@subsubsectionmax=\count190
+\beamer@subsectionmax=\count191
+\beamer@sectionmax=\count192
+\beamer@totalheads=\count193
+\beamer@headcounter=\count194
+\beamer@partstartpage=\count195
+\beamer@sectionstartpage=\count196
+\beamer@subsectionstartpage=\count197
+\beamer@animationtempa=\count198
+\beamer@animationtempb=\count199
+\beamer@xpos=\count266
+\beamer@ypos=\count267
+\beamer@ypos@offset=\count268
+\beamer@showpartnumber=\count269
+\beamer@currentsubsection=\count270
+\beamer@coveringdepth=\count271
+\beamer@sectionadjust=\count272
+\beamer@toclastsection=\count273
+\beamer@tocsectionnumber=\count274
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seoptions.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval
+.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+))
+\beamer@paperwidth=\skip48
+\beamer@paperheight=\skip49
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geomet
+ry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.
+sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
+\Gm@dimlist=\toks17
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/extsizes/size14
+.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/
+pgfcore.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphi
+cx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphi
+cs.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.s
+ty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/gr
+aphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pd
+ftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/systemlayer
+/pgfsys.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/p
+gfrcs.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfutil-common.tex
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfutil-common-lists.tex))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfutil-latex.def
+\pgfutil@abb=\box59
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfrcs.code.tex
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/pgf.revis
+ion.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
+\pgf@xd=\dimen174
+\pgf@yd=\dimen175
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count278
+\c@pgf@countb=\count279
+\c@pgf@countc=\count280
+\c@pgf@countd=\count281
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count282
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count283
+\pgfsyssoftpath@bigbuffer@items=\count284
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/systemlay
+er/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.s
+ty
+Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/co
+lor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
+Package xcolor Info: Model `RGB' extended on input line 1368.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+ath.code.tex
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athcalc.code.tex
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athutil.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athparser.code.tex
+\pgfmath@dimen=\dimen176
+\pgfmath@count=\count285
+\pgfmath@box=\box60
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.code.tex
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.basic.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.trigonometric.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.random.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.comparison.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.base.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.round.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.misc.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfunctions.integerarithmetics.code.tex)))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+athfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count286
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfi
+nt.code.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen177
+\pgf@picmaxx=\dimen178
+\pgf@picminy=\dimen179
+\pgf@picmaxy=\dimen180
+\pgf@pathminx=\dimen181
+\pgf@pathmaxx=\dimen182
+\pgf@pathminy=\dimen183
+\pgf@pathmaxy=\dimen184
+\pgf@xx=\dimen185
+\pgf@xy=\dimen186
+\pgf@yx=\dimen187
+\pgf@yy=\dimen188
+\pgf@zx=\dimen189
+\pgf@zy=\dimen190
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen191
+\pgf@path@lasty=\dimen192
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen193
+\pgf@shorten@start@additional=\dimen194
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count287
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen195
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen196
+\pgf@pt@y=\dimen197
+\pgf@pt@temp=\dimen198
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen199
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen256
+\pgf@sys@shading@range@num=\count288
+\pgf@shadingcount=\count289
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box64
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/basiclaye
+r/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/x
+xcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count290
+\XC@countmixins=\count291
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atbegshi-l
+tx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperr
+ef.sty
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcm
+ds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdftexcmds/pdft
+excmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/inf
+warerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvs
+etkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/
+kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/pdfe
+scape.sty
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor
+.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/let
+ltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook
+.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvopt
+ions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen257
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc
+.def
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperr
+ef-langpatches.def
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
+nguages
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intca
+lc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etex
+cmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count294
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.
+def
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/hyp
+erref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4073.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4073.
+Package hyperref Info: Option `implicit' set `false' on input line 4073.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count295
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen258
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset
+.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bi
+gintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count296
+\Field@Width=\dimen259
+\Fld@charsize=\dimen260
+Package hyperref Info: Hyper figures OFF on input line 6076.
+Package hyperref Info: Link nesting OFF on input line 6081.
+Package hyperref Info: Hyper index ON on input line 6084.
+Package hyperref Info: backreferencing OFF on input line 6091.
+Package hyperref Info: Link coloring OFF on input line 6096.
+Package hyperref Info: Link coloring with OCG OFF on input line 6101.
+Package hyperref Info: PDF/A mode OFF on input line 6106.
+LaTeX Info: Redefining \ref on input line 6146.
+LaTeX Info: Redefining \pageref on input line 6150.
+\Hy@abspage=\count297
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdfte
+x.def
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/atveryend-
+ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count298
+\c@bookmark@seq@number=\count299
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunf
+ilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/oberdiek/uniq
+uecounter.sty
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+serequires.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+secompatibility.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+sefont.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amssym
+b.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfon
+ts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setranslator.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+semisc.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setwoscreens.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seoverlay.sty
+\beamer@argscount=\count300
+\beamer@lastskipcover=\skip50
+\beamer@trivlistdepth=\count301
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setitle.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+sesection.sty
+\c@lecture=\count302
+\c@part=\count303
+\c@section=\count304
+\c@subsection=\count305
+\c@subsubsection=\count306
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seframe.sty
+\beamer@framebox=\box65
+\beamer@frametitlebox=\box66
+\beamer@zoombox=\box67
+\beamer@zoomcount=\count307
+\beamer@zoomframecount=\count308
+\beamer@frametextheight=\dimen261
+\c@subsectionslide=\count309
+\beamer@frametopskip=\skip51
+\beamer@framebottomskip=\skip52
+\beamer@frametopskipautobreak=\skip53
+\beamer@framebottomskipautobreak=\skip54
+\beamer@envbody=\toks29
+\framewidth=\dimen262
+\c@framenumber=\count310
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+severbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seframesize.sty
+\beamer@splitbox=\box68
+\beamer@autobreakcount=\count311
+\beamer@autobreaklastheight=\dimen263
+\beamer@frametitletoks=\toks30
+\beamer@framesubtitletoks=\toks31
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seframecomponents.sty
+\beamer@footins=\box69
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+secolor.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+senotes.sty
+\beamer@frameboxcopy=\box70
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setoc.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setemplates.sty
+\beamer@sbttoks=\toks32
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seauxtemplates.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+seboxes.sty
+\bmb@box=\box71
+\bmb@colorbox=\box72
+\bmb@boxwidth=\dimen264
+\bmb@boxheight=\dimen265
+\bmb@prevheight=\dimen266
+\bmb@temp=\dimen267
+\bmb@dima=\dimen268
+\bmb@dimb=\dimen269
+\bmb@prevheight=\dimen270
+)
+\beamer@blockheadheight=\dimen271
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+selocalstructure.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/enumerate
+.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks33
+)
+\beamer@bibiconwidth=\skip55
+\c@figure=\count312
+\c@table=\count313
+\abovecaptionskip=\skip56
+\belowcaptionskip=\skip57
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+senavigation.sty
+\beamer@section@min@dim=\dimen272
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+setheorems.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath
+.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip58
+For additional information on amsmath, use the `?' option.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext
+.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.
+sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen273
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.
+sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen274
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.
+sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count314
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count315
+\leftroot@=\count316
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count317
+\DOTSCASE@=\count318
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box73
+\strutbox@=\box74
+\big@size=\dimen275
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count319
+\c@MaxMatrixCols=\count320
+\dotsspace@=\muskip17
+\c@parentequation=\count321
+\dspbrk@lvl=\count322
+\tag@help=\toks35
+\row@=\count323
+\column@=\count324
+\maxfields@=\count325
+\andhelp@=\toks36
+\eqnshift@=\dimen276
+\alignsep@=\dimen277
+\tagshift@=\dimen278
+\tagwidth@=\dimen279
+\totwidth@=\dimen280
+\lineht@=\dimen281
+\@envbody=\toks37
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.s
+ty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks39
+\thm@bodyfont=\toks40
+\thm@headfont=\toks41
+\thm@notefont=\toks42
+\thm@headpunct=\toks43
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
+\dth@everypar=\toks44
+)
+\c@theorem=\count326
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerba
+sethemes.sty))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerth
+emedefault.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerfo
+ntthemedefault.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerco
+lorthemedefault.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerin
+nerthemedefault.sty
+\beamer@dima=\dimen282
+\beamer@dimb=\dimen283
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerou
+terthemedefault.sty)))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/p
+gfpages.sty
+Package: pgfpages 2011/01/05 ver 0.02
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count327
+\calc@Bcount=\count328
+\calc@Adimen=\dimen284
+\calc@Bdimen=\dimen285
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count329
+\calc@Cskip=\skip66
+)
+\pgf@logicalpages=\count330
+\pgf@firstshipout=\count331
+\pgf@lastshipout=\count332
+\pgf@currentshipout=\count333
+\pgf@cpn=\count334
+\pgf@shipoutnextto=\count335
+\pgfphysicalheight=\dimen286
+\pgfphysicalwidth=\dimen287
+\pgfpages@shipoutbox=\box75
+) (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.st
+y
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex
+.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluate
+x.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fixltx2e.s
+ty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.st
+y
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+12.
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/inputenc.s
+ty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks45
+\inpenc@posthook=\toks46
+) (./beamerthememonash.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamertheme-met
+ropolis/beamerthememetropolis.sty
+Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgfopts/pgfopts
+.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/p
+gfkeys.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgfkeys.code.tex))
+\pgfopts@list@add@a@toks=\toks47
+\pgfopts@list@add@b@toks=\toks48
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamertheme-met
+ropolis/beamerinnerthememetropolis.sty
+Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/frontendlay
+er/tikz.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/
+pgf.sty
+Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/p
+gfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfnodeparttextbox=\box76
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/p
+gfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibili
+ty/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/compatibili
+ty/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/utilities/p
+gffor.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmat
+h.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+ath.code.tex))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/utilities
+/pgffor.code.tex
+Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/math/pgfm
+ath.code.tex)
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
+\pgffor@stack=\toks49
+\pgffor@toks=\toks50
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendl
+ayer/tikz/tikz.code.tex
+Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/libraries
+/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@plot@mark@count=\count336
+\pgfplotmarksize=\dimen292
+)
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikz@lastmovetox=\dimen297
+\tikz@lastmovetoy=\dimen298
+\tikzleveldistance=\dimen299
+\tikzsiblingdistance=\dimen300
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count337
+\tikznumberofchildren=\count338
+\tikznumberofcurrentchild=\count339
+\tikz@fig@count=\count340
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/modules/p
+gfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfmatrixcurrentrow=\count341
+\pgfmatrixcurrentcolumn=\count342
+\pgf@matrix@numberofcolumns=\count343
+)
+\tikz@expandcount=\count344
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pgf/frontendl
+ayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)))
+\metropolis@titleseparator@linewidth=\skip67
+\metropolis@progressonsectionpage=\skip68
+\metropolis@progressonsectionpage@linewidth=\skip69
+\metropolis@blocksep=\skip70
+\metropolis@blockadjust=\skip71
+\metropolis@parskip=\skip72
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamertheme-met
+ropolis/beamerouterthememetropolis.sty
+Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
+\metropolis@frametitle@padding=\skip73
+\metropolis@progressinheadfoot=\skip74
+\metropolis@progressinheadfoot@linewidth=\skip75
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamertheme-met
+ropolis/beamercolorthememetropolis.sty
+Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamertheme-met
+ropolis/beamerfontthememetropolis.sty
+Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
+
+Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
+aTeX to use the Fira fonts on input line 95.
+
+)) (./beamerfontthememonash.sty
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlito/carlito
+.sty
+Package: carlito 2014/08/20 (Bob Tennent) Supports Carlito fonts for LaTeX, pdf
+LaTeX, luaLaTeX and xeLaTeX.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval
+.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyv
+al.tex
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvut
+ils.tex
+\XKV@toks=\toks51
+\XKV@tempa@toks=\toks52
+)
+\XKV@depth=\count345
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.s
+ty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.st
+y
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontaxes/fontax
+es.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+LaTeX Info: Redefining \textin on input line 153.
+))
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/beamer/beamerin
+nerthemerounded.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textpos/textpos
+.sty
+Package: textpos 2020/09/26 v1.10
+Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
+Package textpos Info: choosing support for LaTeX3 on input line 61.
+\TP@textbox=\box81
+\TP@holdbox=\box82
+\TPHorizModule=\dimen301
+\TPVertModule=\dimen302
+\TP@margin=\dimen303
+\TP@absmargin=\dimen304
+Grid set 16 x 16 = 22.7622pt x 17.07166pt
+\TPboxrulesize=\dimen305
+\TP@ox=\dimen306
+\TP@oy=\dimen307
+\TP@tbargs=\toks53
+TextBlockOrigin set to 0pt x 0pt
+)) (./beamercolorthememonashwhite.sty)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote
+.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/micro
+type.sty
+Package: microtype 2021/10/31 v3.0 Micro-typographical refinements (RS)
+\MT@toks=\toks54
+\MT@count=\count346
+\MT@tempbox=\box83
+\MT@leftmarginkern=\dimen308
+\MT@rightmarginkern=\dimen309
+LaTeX Info: Redefining \textls on input line 1114.
+\MT@outer@kern=\dimen310
+LaTeX Info: Redefining \textmicrotypecontext on input line 1700.
+\MT@listname@count=\count347
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/micro
+type-pdftex.def
+File: microtype-pdftex.def 2021/10/31 v3.0 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip76
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/micro
+type.cfg
+File: microtype.cfg 2021/10/31 v3.0 microtype main configuration file (RS)
+))
+Package hyperref Info: Option `breaklinks' set `true' on input line 69.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grffile/grffile
+.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ncctools/nccmat
+h.sty
+Package: nccmath 2006/01/20 v1.3 Additional Math Commands (NCC)
+\NCC@fracrulewidth=\dimen311
+) (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/lmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/mathpazo
+.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup9
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/bookta
+bs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen312
+\lightrulewidth=\dimen313
+\cmidrulewidth=\dimen314
+\belowrulesep=\dimen315
+\belowbottomsep=\dimen316
+\aboverulesep=\dimen317
+\abovetopsep=\dimen318
+\cmidrulesep=\dimen319
+\cmidrulekern=\dimen320
+\defaultaddspace=\dimen321
+\@cmidla=\count348
+\@cmidlb=\count349
+\@aboverulesep=\dimen322
+\@belowrulesep=\dimen323
+\@thisruleclass=\count350
+\@lastruleclass=\count351
+\@thisrulewidth=\dimen324
+)
+LaTeX Font Info:    Trying to load font information for T1+Carlito-TLF on input
+ line 154.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlito/T1Carli
+to-TLF.fd
+File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
+F.
+)
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 154.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3bac
+kend-pdftex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count352
+\l__pdf_internal_box=\box84
+)
+No file slides.aux.
+\openout1 = `slides.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.19958pt, 307.79619pt, 28.19958pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=307.79619pt
+* \textheight=244.6939pt
+* \oddsidemargin=-44.0704pt
+* \evensidemargin=-44.0704pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=14.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/ep
+stopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/eps
+topdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 154.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/namere
+f.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/oberdiek/refcou
+nt.sty
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestrin
+g/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count353
+)
+LaTeX Info: Redefining \ref on input line 154.
+LaTeX Info: Redefining \pageref on input line 154.
+LaTeX Info: Redefining \nameref on input line 154.
+\@outlinefile=\write5
+\openout5 = `slides.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 154.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 154.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/Carlito-TLF/m/n on input line 154.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/Carlito-TLF/b/n on input line 154.
+
+\symnumbers=\mathgroup10
+\sympureletters=\mathgroup11
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/Carlito-TLF/m/n --> T1/ppl/m/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/Carlito-TLF/m/n on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/Carlito-TLF/m/n on input line 154.
+
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/ppl/m/it --> T1/Carlito-TLF/m/it on input line 154.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/ppl/b/it --> T1/Carlito-TLF/m/it on input line 154.
+
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 154.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/Carlito-TLF/m/n --> T1/Carlito-TLF/b/n on input line
+ 154.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/Carlito-TLF/m/it --> T1/Carlito-TLF/b/it on input li
+ne 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/Carlito-TLF/b/n --> T1/ppl/b/n on input line 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/Carlito-TLF/b/n --> T1/Carlito-TLF/b/n on input line
+ 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/Carlito-TLF/m/n --> T1/Carlito-TLF/b/n on input line
+ 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/Carlito-TLF/m/it --> T1/Carlito-TLF/b/it on input li
+ne 154.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 154.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-bibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
+slator-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+\c@mv@tabular=\count354
+\c@mv@boldtabular=\count355
+LaTeX Info: Redefining \microtypecontext on input line 154.
+Package microtype Info: Applying patch `item' on input line 154.
+Package microtype Info: Applying patch `toc' on input line 154.
+Package microtype Info: Applying patch `eqnum' on input line 154.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 154.
+
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 154.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Carlito-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+No file slides.nav.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 154.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 154.
+<titlepage.png, id=13, 2400.97pt x 1803.73875pt>
+File: titlepage.png Graphic file (type png)
+<use titlepage.png>
+Package pdftex.def Info: titlepage.png  used on input line 159.
+(pdftex.def)             Requested size: 367.20067pt x 275.86104pt.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 20.74pt on input line 159.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 20.74pt on input line 159.
+[1
+
+{c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
+ftex.map} <./titlepage.png>]
+No file slides.toc.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 166.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 17.28pt on input line 166.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 4.0pt on input line 166.
+[2
+
+]
+No file slides.toc.
+[3
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 194.
+
+Overfull \vbox (1.78645pt too high) detected at line 194
+ []
+
+[4
+
+] [5
+
+]
+No file slides.toc.
+[6
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 14.4pt on input line 217.
+
+
+pdfTeX warning: pdflatex.exe (file c:/Puwasala/PostDoc/ARCLP-workshop/presentat
+ion/plots/Framework.pdf): PDF inclusion: found PDF version <1.7>, but at most v
+ersion <1.5> allowed
+<C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf, id=54, 96
+3.6pt x 542.025pt>
+File: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf Graph
+ic file (type pdf)
+<use C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>
+Package pdftex.def Info: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/
+Framework.pdf  used on input line 217.
+(pdftex.def)             Requested size: 307.78487pt x 173.12898pt.
+
+Overfull \vbox (19.88696pt too high) detected at line 217
+ []
+
+[7
+
+ <c:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>]
+No file slides.toc.
+[8
+
+]
+
+pdfTeX warning: pdflatex.exe (file ./plots/Pringle-creek-map.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<plots/Pringle-creek-map.pdf, id=92, 963.6pt x 542.025pt>
+File: plots/Pringle-creek-map.pdf Graphic file (type pdf)
+<use plots/Pringle-creek-map.pdf>
+Package pdftex.def Info: plots/Pringle-creek-map.pdf  used on input line 227.
+(pdftex.def)             Requested size: 307.78487pt x 173.12898pt.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 227.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 227.
+
+Overfull \vbox (19.08351pt too high) detected at line 227
+ []
+
+[9
+
+ <./plots/Pringle-creek-map.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+42.
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OT1+Carlito-TLF on inpu
+t line 242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlito/OT1Carl
+ito-TLF.fd
+File: OT1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for OT1/Carlito-
+TLF.
+)
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 242.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Carlito-TLF' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 242.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 242.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
+242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.
+fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
+242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.
+fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
+242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.
+fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-ms
+a.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 242.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 242.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-ms
+b.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 242.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 8.33606pt on input line 242.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+42.
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cm
+r.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+42.
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+242.
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+242.
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.
+fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 242.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 242.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 8.0pt on input line 242.
+[10
+
+]
+<slides_files/figure-beamer/tsplots-1.pdf, id=113, 578.16pt x 433.62pt>
+File: slides_files/figure-beamer/tsplots-1.pdf Graphic file (type pdf)
+<use slides_files/figure-beamer/tsplots-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/tsplots-1.pdf  used on inpu
+t line 247.
+(pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
+[11
+
+ <./slides_files/figure-beamer/tsplots-1.pdf>]
+<slides_files/figure-beamer/turbdown-down-plot-1.pdf, id=126, 578.16pt x 433.62
+pt>
+File: slides_files/figure-beamer/turbdown-down-plot-1.pdf Graphic file (type pd
+f)
+<use slides_files/figure-beamer/turbdown-down-plot-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/turbdown-down-plot-1.pdf  u
+sed on input line 254.
+(pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
+[12
+
+ <./slides_files/figure-beamer/turbdown-down-plot-1.pdf>]
+<slides_files/figure-beamer/turbdown-up-plot-1.pdf, id=144, 578.16pt x 433.62pt
+>
+File: slides_files/figure-beamer/turbdown-up-plot-1.pdf Graphic file (type pdf)
+
+<use slides_files/figure-beamer/turbdown-up-plot-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/turbdown-up-plot-1.pdf  use
+d on input line 261.
+(pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
+[13
+
+ <./slides_files/figure-beamer/turbdown-up-plot-1.pdf>]
+No file slides.toc.
+[14
+
+]
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.6pt on input line 298.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 298.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 298.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 298.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 298.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 298.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.6pt on input line 298.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 7.6pt on input line 298.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 298.
+[15
+
+]
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 316.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 316.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 316.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 316.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 316.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 14.4pt on input line 316.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 10.0pt on input line 316.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 8.0pt on input line 316.
+[16
+
+] [17
+
+]
+<plots/plot_ccf_dt_pval.pdf, id=196, 435.6275pt x 211.79124pt>
+File: plots/plot_ccf_dt_pval.pdf Graphic file (type pdf)
+<use plots/plot_ccf_dt_pval.pdf>
+Package pdftex.def Info: plots/plot_ccf_dt_pval.pdf  used on input line 353.
+(pdftex.def)             Requested size: 307.79544pt x 149.64247pt.
+[18
+
+ <./plots/plot_ccf_dt_pval.pdf>]
+<plots/vis_dt.pdf, id=208, 434.62375pt x 226.8475pt>
+File: plots/vis_dt.pdf Graphic file (type pdf)
+<use plots/vis_dt.pdf>
+Package pdftex.def Info: plots/vis_dt.pdf  used on input line 357.
+(pdftex.def)             Requested size: 307.81572pt x 160.66132pt.
+[19
+
+ <./plots/vis_dt.pdf>]
+No file slides.toc.
+[20
+
+]
+<slides_files/figure-beamer/classification-all-models-1.pdf, id=231, 578.16pt x
+ 578.16pt>
+File: slides_files/figure-beamer/classification-all-models-1.pdf Graphic file (
+type pdf)
+<use slides_files/figure-beamer/classification-all-models-1.pdf>
+Package pdftex.def Info: slides_files/figure-beamer/classification-all-models-1
+.pdf  used on input line 366.
+(pdftex.def)             Requested size: 194.80739pt x 194.80739pt.
+
+Overfull \vbox (20.45209pt too high) detected at line 366
+ []
+
+[21
+
+ <./slides_files/figure-beamer/classification-all-models-1.pdf>] [22
+
+]
+No file slides.toc.
+[23
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 397.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 397.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 397.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 397.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 397.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 397.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 397.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 397.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 397.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 5.0pt on input line 397.
+
+Overfull \vbox (37.19473pt too high) detected at line 397
+ []
+
+[24
+
+]
+No file slides.toc.
+[25
+
+] [26
+
+]
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 18.0pt on input line 440.
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 440.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 18.0pt on input line 440.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 13.6799pt on input line 440.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.80011pt on input line 440.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 18.75613pt on input line 440.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 14.25455pt on input line 440.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 11.25378pt on input line 440.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 18.75613pt on input line 440.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 14.25455pt on input line 440.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 11.25378pt on input line 440.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 13.6799pt on input line 440.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 10.80011pt on input line 440.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 18.0pt on input line 440.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 13.6799pt on input line 440.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 10.80011pt on input line 440.
+! Undefined control sequence.
+<argument> \faicon 
+                   {twitter} @robjhyndman
+l.440 \end{frame}
+                  
+Here is how much of TeX's memory you used:
+ 28788 strings out of 480313
+ 597538 string characters out of 5895527
+ 840283 words of memory out of 5000000
+ 45660 multiletter control sequences out of 15000+600000
+ 775157 words of font info for 331 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 116i,14n,125p,1827b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

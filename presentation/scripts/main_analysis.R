@@ -971,7 +971,7 @@ sumtab <- sumtab %>%
 # print(sumtab)
 
 
-## ---- all-comparison
+## ---- all-comparison1
 
 # tbl_comparison <- tbl_comparison %>% 
 #   bind_rows(sumtab) %>% 
@@ -991,7 +991,7 @@ sumtab <- sumtab %>%
 #                                        "plots", "tbl_comparison.rda"))
 # 
 
-
+##
 tbl_comparison %>%
   bind_rows(sumtab) %>%
   arrange(desc(OP)) %>%
@@ -1000,11 +1000,12 @@ tbl_comparison %>%
   kableExtra::kbl(format = "latex", booktabs = T,
                     linesep = "") %>%
   kableExtra::kable_styling(font_size = 7,
-                            latex_options="scale_down") 
+                            latex_options="scale_down")
+
 # %>% 
 #   kableExtra::column_spec(1, bold = TRUE) %>% 
 #   kableExtra::row_spec(0, bold = TRUE) 
-  
+##  
 
 
 

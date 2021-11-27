@@ -95,7 +95,7 @@ Turbidity_down %>%
 
 ## Using single sensor data
 
-Suppose we are using data from a single sensor. Then we model the downstream turbidity using contemporaneous variables measured in the same sensor location. 
+Suppose we are using data from a single sensor. Then we model the downstream turbidity using other water-quality variables measured in the same sensor location. 
 
 
 ```{r downstream_scatter}
@@ -112,9 +112,9 @@ data_downstream %>%
     
 ```
 
-We choose level, temperature, conductance and dissolved oxygen to model the downstream turbidity. We impute any missing values in the predictors prior to the analysis. I have used a Kalman filter based on ARIMA state-space model for imputation. The codes for this can be found here \textcolor{red}{give link to the .r file} 
+We choose level, temperature, conductance and dissolved oxygen to model the downstream turbidity. We impute any missing values in the predictors prior to the analysis. I have used a Kalman filter based on ARIMA state-space model for imputation. The codes for this can be found here [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/missing_value_imputation.R] 
 
-First divide the data into training set (01-Oct-2019 to 30-Nov-2019) and test set (01-Dec-2019 to 31-Dec-2019). We use the training set to train the model. We remove all any outliers we identified as the model needs to be trained in a cleaned dataset. 
+First divide the data into training set (01-Oct-2019 to 30-Nov-2019) and test set (01-Dec-2019 to 31-Dec-2019). We use the training set to train the model. We remove all any technical anomalies we identified as the model needs to be trained on a cleaned dataset. 
 
 We fit the model on the log scale of turbidity as the data are very skewed.
 ```{r prepare-data-downstream}
@@ -177,22 +177,21 @@ data_residuals <- data_downstream_imputed%>%
          turbidityAnomalyFlag) %>%
   mutate(predict_mod_down_AR = as.numeric(predict.gam(gam_down_AR, 
                                                       newdata = data_downstream_imputed)),
-         residuals_down_AR = turbidity_downstream_log -
-           predict_mod_down_AR,
+         residuals_down_AR = turbidity_downstream_log - predict_mod_down_AR,
          turbidityAnomalyFlag = case_when(turbidityAnomalyFlag == 0 ~ "typical",
                                           turbidityAnomalyFlag == 1 ~ "outlier",
                                           TRUE ~ as.character(NA)))
 
 ```
 
-Using SPOT to detect anomalies in the residuals. \textcolor{give link to the functions here}
+Using SPOT to detect anomalies in the residuals. See the function for SPOT here [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/SPOT_algorithm.R]
 
 ```{r SPOT-gam-down-AR}
 source(here::here("code-sharing", "src", "SPOT_algorithm.R"))
 
-q <- 0.01
-t_prob <- 0.98
-n = floor(nrow(data_residuals)*0.30) # first 30% of the data (might contain missing values)
+q <- 0.01 # level of significance chosen for the particular application
+t_prob <- 0.98 # probability for the percentile chosen for the threshold in POT
+n = floor(nrow(data_residuals)*0.30) # first 30% of the data for calibrating initial outlier threshold (might contain missing values)
 
 confusion_mod_down_AR <- compute_confusion(data = data_residuals,
                                            residuals = "residuals_down_AR",
@@ -293,15 +292,17 @@ classif_plot_resid_down_AR <- data_residuals %>%
 
 library(patchwork)
 classif_plot_turb_down_AR / classif_plot_resid_down_AR
+
 ```
-This model correctly classifies all true outliers. 
+
+This model correctly classifies all true technical anomalies. 
 However, there are considerable amount of False Positives too. 
 
 # Using multiple sensor data
 
-Suppose we have a flow connected sensor upstream. We can use data from that sensor to predict downstream turbidity series.
+Suppose we have a flow connected sensor upstream. That is water flows through upstream sensor to the downstream sensor. We can use data from that sensor to predict downstream turbidity series.
 
-We first have to calculate the lag time (i.e. the time it takes to flow from upstream to downstream sensor) between the two sensor locations. We find this lag time by maximising the conditional cross-correlation between the two sensors. 
+We first have to calculate the lag time between the two sensor locations (i.e. the time it takes water to flow from upstream to downstream sensor). We find this lag time by maximising the conditional cross-correlation between the two sensors. 
 
 ## Lag time estimation
 
@@ -313,6 +314,9 @@ We first have to use a cleaned data set to compute the models. If necessary we a
 ```{r prep_data_lag_estim}
 load(here::here("code-sharing", "data", 
                 "data_downstream_imputed.rda"))
+load(here::here("code-sharing", "data", 
+                "data_upstream_imputed.rda"))
+
 
 data_xz <- data_upstream_imputed %>% 
   select(Timestamp, level_upstream, temperature_upstream,
@@ -351,7 +355,7 @@ cond_ccf <- data_lag_estim %>%
                             df_correlation = correlation)
 
 autoplot(cond_ccf, type = "mean")
-autoplot(cond_ccf, type = "cross-correlation")
+autoplot(cond_ccf, type = "cross-correlation", k=2)
 ```
 
 ```{r estimate_dt}
@@ -364,6 +368,8 @@ Estimate_dt <- cond_ccf %>%
 Estimate_dt$data_dt
 
 ```
+
+The last column of the *Estimate_dt$data_dt* gives the p-value for the estimated ccf.
 
 ```{r plot-ccf-dt-pval}
 insig_times <- Estimate_dt$data_dt %>% 
@@ -388,7 +394,12 @@ df1 %>%
 
 The red points in \ref{fig:plot-ccf-dt-pval} shows the insignificant ccfs. We can replace these with an appropriate value before computing lagged upstream variables. 
 
+
+
 ```{r vis_dt}
+?autoplot.estimate_dt
+
+# Setting interval==TRUE will compute the bootstrap confidence intervals. 
 autoplot(object = Estimate_dt, m=1000, seed = 1989, 
                     interval = FALSE)
 ```
@@ -421,6 +432,8 @@ data_dt <- data_dt %>%
   select(Timestamp, turbidity_downstream, dt, ccf) 
 data_upstream_new <- list(data_upstream_imputed, data_dt) %>% 
   reduce(left_join, by = "Timestamp")
+
+?map_lags
 
 data_upstream_new_dt <- data_upstream_new %>% 
   map_lags(up = c(level_upstream, conductance_upstream,
@@ -462,7 +475,7 @@ data_all %>%
 
 ```
 
-We choose upstream water level, temeperature, turbidity, conductance and dissolved oxygen to model downstream turbidity.
+We choose upstream water level, temperature, turbidity, conductance and dissolved oxygen to model downstream turbidity.
 
 ```{r prep_data_gam_up_AR}
 

@@ -1,0 +1,64 @@
+Notes from Erin
+
+
+* What is low conditional density means?
+
+* Add a diagram with a river(blue line), flow-connected sensors
+	- You can then point the two sensors and describe the lag time
+	- Target variable - example (Turbidity or nitrate)
+	- Predictors - other water-quality variables (conductivity, water-level)
+	- flow-connected that means water flows from upstream to downstream
+	- Say technical anomalies - If I say outliers then I mean technical anomalies
+	- Remove outliers scores bubble (or put residuals/outlier scores)
+
+* add flow direction in Figure 1
+
+* Slide-11 
+	- Say gray is down and yellow up
+
+* Slide-12/13
+	- adjust the ylabs (abbreviations)
+
+* Slide-15
+	- change contemporaneous to other water-quality variables
+	- Say I model turbidity always with different sets of predictors
+	- Include the first two columns of the table in the paper
+	- The models that includes AR terms are modeling temporal correlation
+
+* Slide-16
+	-  Start by saying that lag time between two sites differs at different times of year, 
+	   or different systems, sizes of rivers. 
+
+* Slide-18
+	- Title for the slide
+	- Cross correlation – say why you expect CC to be positive.
+
+* Slide-21
+	- Discuss how's the threshold is determined
+
+* Concluding slide
+* How would you choose between GAM-down-AR and GAM-up-AR/GAM-up-down. This depends on their priorities
+	- If you don't want to miss any outlier /very critical about outliers
+	  maybe you want to take GAM-down-AR
+	- In most cases, someone has to go to the sensor and inspect the sensor
+	  causing outliers. In that case you might want a balance between 
+	  FP and FN which you can go for the GAM-up-AR/GAM-up-down. Minimise the operational cost
+	- Odd-water with multivariate approach might be better, but this is just the univariate approach
+* Take away messages
+	- Trade-off between FP and FN
+	- Reduce operational cost
+	- The method still can be used for single sensor
+	
+	- You can put low-cost sensors close together
+* Thank you slide
+
+
+
+
+
+
+
+
+
+
+

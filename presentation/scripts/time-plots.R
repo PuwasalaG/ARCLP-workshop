@@ -115,8 +115,8 @@ plot_turb_down <- PRIN_data %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, turbidity)) +
-  ylab("Turbidity (FNU)") +
-  ggtitle("downstream")
+  ylab("Turb (FNU)") +
+  ggtitle("Turbidity (downstream)")
 
 
 plot_level_down <- PRIN_5min_cleaned %>%
@@ -132,7 +132,7 @@ plot_level_down <- PRIN_5min_cleaned %>%
              color = "#009E73", size = 0.5,
              aes(Timestamp, level)) +
   ylab("Level (m)") +
-  ggtitle("downstream")
+  ggtitle("Level (downstream)")
 
 
 plot_cond_down <- PRIN_5min_cleaned %>%
@@ -147,8 +147,8 @@ plot_cond_down <- PRIN_5min_cleaned %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, conductance)) +
-  ylab(expression(Conductance~(mu*S*'/'*cm))) +
-  ggtitle("downstream")
+  ylab(expression(Cond~(mu*S*'/'*cm))) +
+  ggtitle("Conductance (downstream)")
 
 plot_do_down <- PRIN_5min_cleaned %>%
   filter(site == "down") %>% 
@@ -163,7 +163,7 @@ plot_do_down <- PRIN_5min_cleaned %>%
              color = "#009E73", size = 0.5,
              aes(Timestamp, dissolved_oxygen)) +
   ylab("DO (mg/l)") +
-  ggtitle("downstream")
+  ggtitle("Dissolved-oxygen (downstream)")
 
 plot_temp_down <- PRIN_5min_cleaned %>%
   filter(site == "down") %>% 
@@ -177,8 +177,8 @@ plot_temp_down <- PRIN_5min_cleaned %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, temperature)) +
-  ylab(expression('Temperature ('~degree*C*')'))+
-  ggtitle("downstream")
+  ylab(expression('Temp ('~degree*C*')'))+
+  ggtitle("Temperature (downstream)")
 
 
 gridExtra::grid.arrange(plot_turb_down + theme(axis.title.x = element_blank()), 
@@ -203,8 +203,8 @@ plot_turb_up <- PRIN_5min_cleaned %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, turbidity)) +
-  ylab("Turbidity (FNU)")+
-  ggtitle("upstream")
+  ylab("Turb (FNU)")+
+  ggtitle("Turbidity (upstream)")
 
 
 plot_level_up <- PRIN_5min_cleaned %>%
@@ -220,7 +220,7 @@ plot_level_up <- PRIN_5min_cleaned %>%
              color = "#009E73", size = 0.5,
              aes(Timestamp, level)) +
   ylab("Level (m)") +
-  ggtitle("upstream")
+  ggtitle("Level (upstream)")
 
 
 plot_cond_up <- PRIN_5min_cleaned %>%
@@ -235,8 +235,8 @@ plot_cond_up <- PRIN_5min_cleaned %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, conductance)) +
-  ylab(expression(Conductance~(mu*S*'/'*cm))) +
-  ggtitle("upstream")
+  ylab(expression(Cond~(mu*S*'/'*cm))) +
+  ggtitle("Conductance (upstream)")
 
 plot_do_up <- PRIN_5min_cleaned %>%
   filter(site == "up") %>% 
@@ -251,7 +251,7 @@ plot_do_up <- PRIN_5min_cleaned %>%
              color = "#009E73", size = 0.5,
              aes(Timestamp, dissolved_oxygen)) +
   ylab("DO (mg/l)") +
-  ggtitle("upstream")
+  ggtitle("Dissolved-oxygen (upstream)")
 
 plot_temp_up <- PRIN_5min_cleaned %>%
   filter(site == "up") %>% 
@@ -265,8 +265,8 @@ plot_temp_up <- PRIN_5min_cleaned %>%
                       & Timestamp < ymd_hms("2019-11-09 00:00:00")),
              color = "#009E73", size = 0.5,
              aes(Timestamp, temperature)) +
-  ylab(expression('Temperature ('~degree*C*')'))+
-  ggtitle("upstream")
+  ylab(expression('Temp ('~degree*C*')'))+
+  ggtitle("Temperature (upstream)")
 
 
 gridExtra::grid.arrange(plot_turb_down + theme(axis.title.x = element_blank()), 

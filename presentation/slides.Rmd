@@ -68,7 +68,7 @@ read_chunk(here::here("presentation",
 ```{r framework, echo=FALSE, fig.width=6, fig.height=4}
 
 knitr::include_graphics(here::here("presentation", 
-                                   "plots", "Framework-1.pdf"))
+                                   "plots", "Framework.pdf"))
 
 ```
 
@@ -77,7 +77,7 @@ knitr::include_graphics(here::here("presentation",
 ## Pringle Creek - Texas, USA
 
 ```{r pringle-creek-map, echo=FALSE, out.width="100%", fig.cap="image courtesy neonscience.org"}
-knitr::include_graphics('plots/Pringle-creek-map.png')
+knitr::include_graphics('plots/Pringle-creek-map.pdf')
 ```
 
 ## Data 
@@ -125,11 +125,36 @@ y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
 \end{equation*}
 
 ### Choices for $z_{i,t_l}$
-* **GAM-down:** Downstream contemporaneous variables
-* **GAM-down-AR:** Downstream contemporaneous variables + AR terms
-* **GAM-up:** Upstream lagged variables
-* **GAM-up-AR:** Upstream lagged variables + AR terms
-* **GAM-up-down:** Upstream lagged variables + Downstream contemporaneous variables
+<!-- * **GAM-down:** Downstream contemporaneous variables -->
+<!-- * **GAM-down-AR:** Downstream contemporaneous variables + AR terms -->
+<!-- * **GAM-up:** Upstream lagged variables -->
+<!-- * **GAM-up-AR:** Upstream lagged variables + AR terms -->
+<!-- * **GAM-up-down:** Upstream lagged variables + Downstream contemporaneous variables -->
+
+```{r}
+params <- data.frame(
+  method = c("GAM-up-AR", "GAM-up", "GAM-down", "GAM-up-down", 
+             "GAM-down-AR"),
+  Predictors = c("turbidity(up), conductance(up), level(up),
+                 temperature(up), lagged responses",
+                 "turbidity(up), conductance(up), level(up),
+                 temperature(up), dissolved oxygen(up)",
+                 "conductance(down), level(down), temperature(down),
+                 dissolved oxygen(down)",
+                 "turbidity(up), conductance(up), level(up),
+                 temperature(up),dissolved oxygen(up),conductance(down),
+                 temperature(down)",
+                 "conductance(down), dissolved oxygen(down),
+                 level(down), temperature(down), lagged response"
+  ))
+
+params %>%
+  kableExtra::kbl(format = "latex", booktabs = T,
+                  linesep = "") %>%
+   kableExtra::kable_styling(font_size = 10,
+                            latex_options="scale_down")
+
+```
 
 
 ## Lag time estimation
@@ -154,7 +179,7 @@ $$
 
 - To estimate $r_k(\bm{z}_t)$ we fit the following GAMs
 
-- Let $x_t^*y^*_{t+k}|\bm{z}_t \sim \text{N}(r_k(\bm{z}_t), \sigma_r^2)$, 
+- Let $x_t^*y^*_{t+k}|\bm{z}_t \sim \text{N}(r_k(\bm{z}_t), \sigma_r^2)$,
 
 $$
 g(r_k(\bm{z}_t)) = \gamma_0 + \sum_{i=1}^p h_i(z_{i,t}) + \varepsilon_t
@@ -173,6 +198,8 @@ $$
 
 
 ---
+
+## Conditional cross-correlation and lag time estimation
 
 ```{r plot_ccf_dt_pval, out.width="100%"}
 
@@ -220,12 +247,12 @@ knitr::include_graphics('plots/vis_dt.pdf')
 
 ```
 
-```{r all-comparison}
+```{r all-comparison1}
 # library(kableExtra)
-# 
+#
 # load(here::here("ARCLP-DES-Catchup","Meeting-4", "plots",
 #                 "tbl_comparison.rda"))
-# 
+#
 # tbl_comparison %>%
 #   kable(format = "latex", booktabs = T) %>%
 #   kable_styling(font_size = 8)
@@ -237,9 +264,43 @@ knitr::include_graphics('plots/vis_dt.pdf')
 ```
 
 
+# Conclusion
+
+## Conclusions
+
+- A new framework to detect technical anomalies
+
+- Uses temporal correlation between the water-quality variables to detect anomalies
+
+- Utilising information from the nearby sensors improves the performance of the algorithm
+
+- Place low-cost sensors close together
+
+---
 
 
 
+<!-- ## More information -->
+<!-- \fontsize{18}{20}\sf -->
+
+<!-- \vspace*{1cm} -->
+
+<!-- \begin{block}{} -->
+<!-- \url{robjhyndman.com/seminars/gratis/} -->
+<!-- \end{block} -->
+
+<!-- \begin{textblock}{8}(4.4,5.2) -->
+<!-- \begin{alertblock}{Find me at ...} -->
+<!-- \href{https://twitter.com/robjhyndman}{\faicon{twitter} @robjhyndman} -->
+
+<!-- \href{https://github.com/robjhyndman}{\faicon{github}  @robjhyndman} -->
+
+<!-- \href{https://robjhyndman.com}{\faicon{home} robjhyndman.com} -->
+
+<!-- \href{mailto:rob.hyndman@monash.edu}{\faicon{envelope}  rob.hyndman@monash.edu} -->
+<!-- \end{alertblock} -->
+<!-- \end{textblock} -->
+<!-- \vspace*{10cm} -->
 
 
 
