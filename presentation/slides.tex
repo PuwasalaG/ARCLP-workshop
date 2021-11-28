@@ -133,7 +133,38 @@
 \fi
 %%
 
-  \usepackage{amsmath, nccmath, graphicx} \usepackage{bm} \usepackage{mathpazo} \usepackage{booktabs}
+  % Colors
+  \setbeamercolor{description item}{fg=Orange}
+  \definecolor{MonashBlue}{RGB}{73,129,175}
+  % Colors
+  \definecolor{DarkBrown}{RGB}{80,70,60}
+  \setbeamercolor{description item}{fg=Orange}
+  \setbeamercolor{block title alerted}{fg=white,bg=DarkBrown}
+  \setbeamercolor{block title}{fg=white,bg=DarkBrown}
+  \setbeamercolor{frametitle}{bg=DarkBrown,fg=white}
+
+  % Packages
+  \usepackage{amsmath, nccmath, graphicx}
+  \usepackage{bm}
+  \usepackage{mathpazo}
+  \usepackage{booktabs}
+  \usepackage{fontawesome}
+
+
+  % Monash title page
+  \setbeamertemplate{title page}
+  {\placefig{-0.01}{-0.01}{width=1.01\paperwidth,height=1.01\paperheight}{Title-page.jpg}
+  \begin{textblock}{10.5}(0.5,2.8)\usebeamerfont{title} %2.8
+  {\color{white}\raggedleft\par\inserttitle}
+  \end{textblock}
+  \begin{textblock}{5.5}(0.5,7)
+  {\color{white}\raggedleft\par\insertauthor\mbox{}}
+  \end{textblock}
+  \begin{textblock}{5.5}(0.5,7.8)
+  {\color{white}\raggedleft\par\insertdate\mbox{}}
+  \end{textblock}}
+
+
 
   \title[]{A framework for detecting anomalies in water-quality
 variables}
@@ -146,9 +177,9 @@ variables}
 
 
 \date[
-      \today
+      ARCLP Workshop
   ]{
-      \today
+      ARCLP Workshop
         }
 
 \begin{document}
@@ -193,27 +224,15 @@ variables}
 \end{block}
 \end{frame}
 
-\begin{frame}{Why multiple sensors?}
-\protect\hypertarget{why-multiple-sensors}{}
-\begin{itemize}
-\tightlist
-\item
-  Single sensor may not be able to detect certain type of anomalies
-\item
-  If the sensors are malfunctioning, then the covariates or lagged
-  values of them may be incorrect
-\end{itemize}
-\end{frame}
-
 \hypertarget{framework}{%
 \section{Framework}\label{framework}}
 
 \begin{frame}{Anomaly detection framework}
 \protect\hypertarget{anomaly-detection-framework}{}
 \emph{An anomaly is an observation that has an unexpectedly low
-conditional distribution}
+conditional density}
 
-\includegraphics{C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf}
+\includegraphics{C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf}
 \end{frame}
 
 \hypertarget{data}{%
@@ -265,8 +284,10 @@ conditional distribution}
 
 \begin{frame}{Modeling downstream turbidity}
 \protect\hypertarget{modeling-downstream-turbidity}{}
+\small
+
 \begin{equation*}\label{eq:gam_main}
-y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
+turbidity\_down_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(turbidity\_down_{t-j}) + \varepsilon_t
 \end{equation*}
 
 \begin{block}{Choices for \(z_{i,t_l}\)}
@@ -277,19 +298,13 @@ y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{ll}
 \toprule
-method & Predictors\\
+Model & Predictors\\
 \midrule
-GAM-up-AR & turbidity(up), conductance(up), level(up),
-                 temperature(up), lagged responses\\
-GAM-up & turbidity(up), conductance(up), level(up),
-                 temperature(up), dissolved oxygen(up)\\
-GAM-down & conductance(down), level(down), temperature(down),
-                 dissolved oxygen(down)\\
-GAM-up-down & turbidity(up), conductance(up), level(up),
-                 temperature(up),dissolved oxygen(up),conductance(down),
-                 temperature(down)\\
-GAM-down-AR & conductance(down), dissolved oxygen(down),
-                 level(down), temperature(down), lagged response\\
+GAM-down & other downstream variables\\
+GAM-down-AR & other downstream variables + lagged responses\\
+GAM-up & upstream variables\\
+GAM-up-AR & upstream variables + lagged responses\\
+GAM-up-down & upstream variables + downstream variables\\
 \bottomrule
 \end{tabular}}
 \endgroup{}
@@ -365,9 +380,6 @@ theory}\label{outlier-detection-based-on-extreme-value-theory}}
 \includegraphics[width=1\linewidth]{slides_files/figure-beamer/classification-all-models-1}
 \end{frame}
 
-\begin{frame}
-\end{frame}
-
 \hypertarget{evaluation}{%
 \section{Evaluation}\label{evaluation}}
 
@@ -415,28 +427,19 @@ stray(p=0.75, k=1) & 15 & 9835 & 16177 & 0 & -0.0728\\
 \end{itemize}
 \end{frame}
 
-\begin{frame}{More information}
-\protect\hypertarget{more-information}{}
-\fontsize{18}{20}\sf
-
-\vspace*{1cm}
+\begin{frame}
+\begin{center}
+\Huge \emph{Thank You!}
+\end{center}
 
 \begin{block}{}
-\url{robjhyndman.com/seminars/gratis/}
+Slides: \textcolor{blue}{\url{https://github.com/PuwasalaG/ARCLP-workshop/tree/main/presentation}}
+\vspace*{1cm}
+
+\href{https://github.com/PuwasalaG}{\faicon{github}  @PuwasalaG}
+
+\href{mailto:puwasala.gamakumara@gmail.com}{\faicon{envelope}  puwasala.gamakumara@gmail.com}
 \end{block}
-
-\begin{textblock}{8}(4.4,5.2)
-\begin{alertblock}{Find me at ...}
-\href{https://twitter.com/robjhyndman}{\faicon{twitter} @robjhyndman}
-
-\href{https://github.com/robjhyndman}{\faicon{github}  @robjhyndman}
-
-\href{https://robjhyndman.com}{\faicon{home} robjhyndman.com}
-
-\href{mailto:rob.hyndman@monash.edu}{\faicon{envelope}  rob.hyndman@monash.edu}
-\end{alertblock}
-\end{textblock}
-\vspace*{10cm}
 \end{frame}
 
 

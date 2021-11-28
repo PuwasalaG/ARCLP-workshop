@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.24)  27 NOV 2021 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.24)  28 NOV 2021 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,8 +1134,16 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count351
 \@thisrulewidth=\dimen324
 )
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/fon
+tawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/fon
+tawesomesymbols-generic.tex)
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/fon
+tawesomesymbols-pdftex.tex))
 LaTeX Font Info:    Trying to load font information for T1+Carlito-TLF on input
- line 154.
+ line 185.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlito/T1Carli
 to-TLF.fd
@@ -1143,35 +1151,34 @@ File: T1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for T1/Carlito-TL
 F.
 )
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 154.
+(Font)              scaled to size 14.4pt on input line 185.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3bac
 kend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count352
 \l__pdf_internal_box=\box84
-)
-No file slides.aux.
+) (./slides.aux)
 \openout1 = `slides.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 185.
+LaTeX Font Info:    ... okay on input line 185.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1218,7 +1225,7 @@ topdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 154.
+Package hyperref Info: Link coloring OFF on input line 185.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/namere
 f.sty
@@ -1234,68 +1241,69 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 154.
-LaTeX Info: Redefining \pageref on input line 154.
-LaTeX Info: Redefining \nameref on input line 154.
+LaTeX Info: Redefining \ref on input line 185.
+LaTeX Info: Redefining \pageref on input line 185.
+LaTeX Info: Redefining \nameref on input line 185.
+(./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 154.
+(Font)                  OT1/ppl/m/n --> OT1/cmss/m/n on input line 185.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 154.
+(Font)                  OT1/ppl/b/n --> OT1/cmss/b/n on input line 185.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/Carlito-TLF/m/n on input line 154.
+(Font)                  OT1/cmss/m/n --> OT1/Carlito-TLF/m/n on input line 185.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/Carlito-TLF/b/n on input line 154.
+(Font)                  OT1/cmss/b/n --> OT1/Carlito-TLF/b/n on input line 185.
 
 \symnumbers=\mathgroup10
 \sympureletters=\mathgroup11
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/Carlito-TLF/m/n --> T1/ppl/m/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 154.
+(Font)                  OT1/Carlito-TLF/m/n --> T1/ppl/m/n on input line 185.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 154.
+(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 154.
+(Font)                  OT1/zplm/b/n --> T1/Carlito-TLF/b/n on input line 185.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/Carlito-TLF/m/n on input line 154.
+(Font)                  OT1/lmss/m/n --> T1/Carlito-TLF/m/n on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/Carlito-TLF/m/n on input line 154.
+(Font)                  OT1/lmss/bx/n --> T1/Carlito-TLF/m/n on input line 185.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/ppl/m/it --> T1/Carlito-TLF/m/it on input line 154.
+(Font)                  OT1/ppl/m/it --> T1/Carlito-TLF/m/it on input line 185.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/ppl/b/it --> T1/Carlito-TLF/m/it on input line 154.
+(Font)                  OT1/ppl/b/it --> T1/Carlito-TLF/m/it on input line 185.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 154.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 154.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 185.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
 (Font)                  T1/Carlito-TLF/m/n --> T1/Carlito-TLF/b/n on input line
- 154.
+ 185.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  T1/Carlito-TLF/m/it --> T1/Carlito-TLF/b/it on input li
-ne 154.
+ne 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/Carlito-TLF/b/n --> T1/ppl/b/n on input line 154.
+(Font)                  OT1/Carlito-TLF/b/n --> T1/ppl/b/n on input line 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
 (Font)                  T1/Carlito-TLF/b/n --> T1/Carlito-TLF/b/n on input line
- 154.
+ 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  T1/Carlito-TLF/m/n --> T1/Carlito-TLF/b/n on input line
- 154.
+ 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  T1/Carlito-TLF/m/it --> T1/Carlito-TLF/b/it on input li
-ne 154.
+ne 185.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 154.
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 185.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/translator/tran
 slator-basic-dictionary-English.dict
@@ -1323,12 +1331,12 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 \c@mv@tabular=\count354
 \c@mv@boldtabular=\count355
-LaTeX Info: Redefining \microtypecontext on input line 154.
-Package microtype Info: Applying patch `item' on input line 154.
-Package microtype Info: Applying patch `toc' on input line 154.
-Package microtype Info: Applying patch `eqnum' on input line 154.
+LaTeX Info: Redefining \microtypecontext on input line 185.
+Package microtype Info: Applying patch `item' on input line 185.
+Package microtype Info: Applying patch `toc' on input line 185.
+Package microtype Info: Applying patch `eqnum' on input line 185.
 
-Package microtype Warning: Unable to apply patch `footnote' on input line 154.
+Package microtype Warning: Unable to apply patch `footnote' on input line 185.
 
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1336,7 +1344,7 @@ Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 154.
+LaTeX Info: Redefining \showhyphens on input line 185.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1344,105 +1352,98 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Carlito-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-No file slides.nav.
+(./slides.nav)
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 154.
+(Font)              scaled to size 6.0pt on input line 185.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 154.
-<titlepage.png, id=13, 2400.97pt x 1803.73875pt>
-File: titlepage.png Graphic file (type png)
-<use titlepage.png>
-Package pdftex.def Info: titlepage.png  used on input line 159.
-(pdftex.def)             Requested size: 367.20067pt x 275.86104pt.
+(Font)              scaled to size 8.0pt on input line 185.
+<Title-page.jpg, id=41, 2726.185pt x 1816.7875pt>
+File: Title-page.jpg Graphic file (type jpg)
+<use Title-page.jpg>
+Package pdftex.def Info: Title-page.jpg  used on input line 190.
+(pdftex.def)             Requested size: 367.81111pt x 245.11713pt.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 159.
+(Font)              scaled to size 20.74pt on input line 190.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 159.
+(Font)              scaled to size 20.74pt on input line 190.
 [1
 
 {c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
-ftex.map} <./titlepage.png>]
-No file slides.toc.
+ftex.map} <./Title-page.jpg>] (./slides.toc
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 166.
+(Font)              scaled to size 17.28pt on input line 1.
+)
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 166.
+(Font)              scaled to size 17.28pt on input line 197.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 4.0pt on input line 166.
+(Font)              scaled to size 4.0pt on input line 197.
 [2
 
-]
-No file slides.toc.
-[3
+] (./slides.toc) [3
 
 ]
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 194.
+(Font)              scaled to size 14.4pt on input line 225.
 
-Overfull \vbox (1.78645pt too high) detected at line 194
+Overfull \vbox (1.78645pt too high) detected at line 225
  []
 
 [4
 
-] [5
-
-]
-No file slides.toc.
-[6
+] (./slides.toc) [5
 
 ]
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 14.4pt on input line 217.
+(Font)              scaled to size 14.4pt on input line 236.
 
 
-pdfTeX warning: pdflatex.exe (file c:/Puwasala/PostDoc/ARCLP-workshop/presentat
-ion/plots/Framework.pdf): PDF inclusion: found PDF version <1.7>, but at most v
-ersion <1.5> allowed
-<C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf, id=54, 96
-3.6pt x 542.025pt>
-File: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf Graph
-ic file (type pdf)
-<use C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>
-Package pdftex.def Info: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/
-Framework.pdf  used on input line 217.
+pdfTeX warning: pdflatex.exe (file c:/Puwasala/ARCLP-workshop/presentation/plot
+s/Framework.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
+1.5> allowed
+<C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf, id=100, 963.6pt x
+ 542.025pt>
+File: C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf Graphic file 
+(type pdf)
+<use C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf>
+Package pdftex.def Info: C:/Puwasala/ARCLP-workshop/presentation/plots/Framewor
+k.pdf  used on input line 236.
 (pdftex.def)             Requested size: 307.78487pt x 173.12898pt.
 
-Overfull \vbox (19.88696pt too high) detected at line 217
+Overfull \vbox (19.88696pt too high) detected at line 236
  []
 
-[7
+[6
 
- <c:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>]
-No file slides.toc.
-[8
+ <c:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf>] (./slides.toc) 
+[7
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./plots/Pringle-creek-map.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/Pringle-creek-map.pdf, id=92, 963.6pt x 542.025pt>
+<plots/Pringle-creek-map.pdf, id=144, 963.6pt x 542.025pt>
 File: plots/Pringle-creek-map.pdf Graphic file (type pdf)
 <use plots/Pringle-creek-map.pdf>
-Package pdftex.def Info: plots/Pringle-creek-map.pdf  used on input line 227.
+Package pdftex.def Info: plots/Pringle-creek-map.pdf  used on input line 246.
 (pdftex.def)             Requested size: 307.78487pt x 173.12898pt.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 227.
+(Font)              scaled to size 12.0pt on input line 246.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 227.
+(Font)              scaled to size 12.0pt on input line 246.
 
-Overfull \vbox (19.08351pt too high) detected at line 227
+Overfull \vbox (19.08351pt too high) detected at line 246
  []
 
-[9
+[8
 
  <./plots/Pringle-creek-map.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-42.
+61.
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+Carlito-TLF on inpu
-t line 242.
+t line 261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlito/OT1Carl
 ito-TLF.fd
@@ -1450,60 +1451,60 @@ File: OT1Carlito-TLF.fd 2014/08/20 (autoinst) Font definitions for OT1/Carlito-
 TLF.
 )
 LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 242.
+(Font)              scaled to size 14.4pt on input line 261.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Carlito-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 242.
+(Font)              scaled to size 10.0pt on input line 261.
 LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 242.
+(Font)              scaled to size 8.0pt on input line 261.
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-242.
+261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omlzplm.
 fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-242.
+261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omszplm.
 fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-242.
+261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/omxzplm.
 fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 242.
+(Font)              scaled to size 15.0049pt on input line 261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-ms
 a.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 242.
+(Font)              scaled to size 10.42007pt on input line 261.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 242.
+(Font)              scaled to size 8.33606pt on input line 261.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 242.
+(Font)              scaled to size 15.0049pt on input line 261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-ms
 b.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 242.
+(Font)              scaled to size 10.42007pt on input line 261.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 242.
+(Font)              scaled to size 8.33606pt on input line 261.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-42.
+61.
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1513,225 +1514,262 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-42.
+61.
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-242.
+261.
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-242.
+261.
 
 (c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ot1zplm.
 fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 242.
+(Font)              scaled to size 10.0pt on input line 261.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 242.
+(Font)              scaled to size 10.0pt on input line 261.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 242.
-[10
+(Font)              scaled to size 8.0pt on input line 261.
+[9
 
 ]
-<slides_files/figure-beamer/tsplots-1.pdf, id=113, 578.16pt x 433.62pt>
+<slides_files/figure-beamer/tsplots-1.pdf, id=165, 578.16pt x 433.62pt>
 File: slides_files/figure-beamer/tsplots-1.pdf Graphic file (type pdf)
 <use slides_files/figure-beamer/tsplots-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/tsplots-1.pdf  used on inpu
-t line 247.
+t line 266.
 (pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
-[11
+[10
 
  <./slides_files/figure-beamer/tsplots-1.pdf>]
-<slides_files/figure-beamer/turbdown-down-plot-1.pdf, id=126, 578.16pt x 433.62
+<slides_files/figure-beamer/turbdown-down-plot-1.pdf, id=178, 578.16pt x 433.62
 pt>
 File: slides_files/figure-beamer/turbdown-down-plot-1.pdf Graphic file (type pd
 f)
 <use slides_files/figure-beamer/turbdown-down-plot-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/turbdown-down-plot-1.pdf  u
-sed on input line 254.
+sed on input line 273.
 (pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
-[12
+[11
 
  <./slides_files/figure-beamer/turbdown-down-plot-1.pdf>]
-<slides_files/figure-beamer/turbdown-up-plot-1.pdf, id=144, 578.16pt x 433.62pt
+<slides_files/figure-beamer/turbdown-up-plot-1.pdf, id=195, 578.16pt x 433.62pt
 >
 File: slides_files/figure-beamer/turbdown-up-plot-1.pdf Graphic file (type pdf)
 
 <use slides_files/figure-beamer/turbdown-up-plot-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/turbdown-up-plot-1.pdf  use
-d on input line 261.
+d on input line 280.
 (pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
-[13
+[12
 
- <./slides_files/figure-beamer/turbdown-up-plot-1.pdf>]
-No file slides.toc.
+ <./slides_files/figure-beamer/turbdown-up-plot-1.pdf>] (./slides.toc) [13
+
+]
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 313.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 313.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 313.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 313.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 313.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 313.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 12.50409pt on input line 313.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 313.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 7.0pt on input line 313.
+
+Overfull \hbox (21.51071pt too wide) detected at line 313
+[][]\T1/Carlito-TLF/m/it/12 turbidity[]down[] \OT1/zplm/m/n/12 = \OML/zplm/m/it
+/12 ^^^[] \OT1/zplm/m/n/12 + [] \T1/Carlito-TLF/m/it/12 g[]\OT1/zplm/m/n/12 (\T
+1/Carlito-TLF/m/it/12 z[]\OT1/zplm/m/n/12 ) + [] \T1/Carlito-TLF/m/it/12 h[]\OT
+1/zplm/m/n/12 (\T1/Carlito-TLF/m/it/12 turbidity[]down[]\OT1/zplm/m/n/12 ) + \O
+ML/zplm/m/it/12 "[][]
+ []
+
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.6pt on input line 313.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 313.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 313.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 313.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 313.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 7.6pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 7.6pt on input line 313.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 313.
+
+Overfull \vbox (17.09209pt too high) detected at line 313
+ []
+
 [14
 
 ]
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 7.6pt on input line 298.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 298.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 298.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 298.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 298.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 298.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 7.6pt on input line 298.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 7.6pt on input line 298.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 6.0pt on input line 298.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 331.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 331.
+LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 331.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 331.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
+(Font)              scaled to size 8.0pt on input line 331.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 14.4pt on input line 331.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 10.0pt on input line 331.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
+(Font)              scaled to size 8.0pt on input line 331.
 [15
 
-]
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 316.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 316.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 316.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 316.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 316.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
-(Font)              scaled to size 14.4pt on input line 316.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
-(Font)              scaled to size 10.0pt on input line 316.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
-(Font)              scaled to size 8.0pt on input line 316.
-[16
-
-] [17
+] [16
 
 ]
-<plots/plot_ccf_dt_pval.pdf, id=196, 435.6275pt x 211.79124pt>
+<plots/plot_ccf_dt_pval.pdf, id=252, 435.6275pt x 211.79124pt>
 File: plots/plot_ccf_dt_pval.pdf Graphic file (type pdf)
 <use plots/plot_ccf_dt_pval.pdf>
-Package pdftex.def Info: plots/plot_ccf_dt_pval.pdf  used on input line 353.
+Package pdftex.def Info: plots/plot_ccf_dt_pval.pdf  used on input line 368.
 (pdftex.def)             Requested size: 307.79544pt x 149.64247pt.
-[18
+[17
 
  <./plots/plot_ccf_dt_pval.pdf>]
-<plots/vis_dt.pdf, id=208, 434.62375pt x 226.8475pt>
+<plots/vis_dt.pdf, id=264, 434.62375pt x 226.8475pt>
 File: plots/vis_dt.pdf Graphic file (type pdf)
 <use plots/vis_dt.pdf>
-Package pdftex.def Info: plots/vis_dt.pdf  used on input line 357.
+Package pdftex.def Info: plots/vis_dt.pdf  used on input line 372.
 (pdftex.def)             Requested size: 307.81572pt x 160.66132pt.
-[19
+[18
 
- <./plots/vis_dt.pdf>]
-No file slides.toc.
-[20
+ <./plots/vis_dt.pdf>] (./slides.toc) [19
 
 ]
-<slides_files/figure-beamer/classification-all-models-1.pdf, id=231, 578.16pt x
+<slides_files/figure-beamer/classification-all-models-1.pdf, id=293, 578.16pt x
  578.16pt>
 File: slides_files/figure-beamer/classification-all-models-1.pdf Graphic file (
 type pdf)
 <use slides_files/figure-beamer/classification-all-models-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/classification-all-models-1
-.pdf  used on input line 366.
+.pdf  used on input line 381.
 (pdftex.def)             Requested size: 194.80739pt x 194.80739pt.
 
-Overfull \vbox (20.45209pt too high) detected at line 366
+Overfull \vbox (20.45209pt too high) detected at line 381
  []
 
+[20
+
+ <./slides_files/figure-beamer/classification-all-models-1.pdf>] (./slides.toc)
 [21
 
- <./slides_files/figure-beamer/classification-all-models-1.pdf>] [22
-
 ]
-No file slides.toc.
-[23
-
-]
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 397.
 LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 397.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 397.
+(Font)              scaled to size 5.0pt on input line 409.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 397.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 397.
+(Font)              scaled to size 5.21004pt on input line 409.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 397.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 397.
+(Font)              scaled to size 5.21004pt on input line 409.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 397.
+(Font)              scaled to size 5.0pt on input line 409.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 7.0pt on input line 397.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 5.0pt on input line 397.
+(Font)              scaled to size 5.0pt on input line 409.
 
-Overfull \vbox (37.19473pt too high) detected at line 397
+Overfull \vbox (37.19473pt too high) detected at line 409
  []
 
-[24
+[22
+
+] (./slides.toc) [23
+
+] [24
 
 ]
-No file slides.toc.
-[25
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
+(Font)              scaled to size 35.83pt on input line 443.
+LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
+(Font)              scaled to size 35.83pt on input line 443.
+LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
+ut line 443.
 
-] [26
+(c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fontawesome/ufo
+ntawesometwo.fd
+File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
+) [25
 
 ]
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 18.0pt on input line 440.
-LaTeX Font Info:    Calculating math sizes for size <18> on input line 440.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 18.0pt on input line 440.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 13.6799pt on input line 440.
-LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.80011pt on input line 440.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 18.75613pt on input line 440.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 14.25455pt on input line 440.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.25378pt on input line 440.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 18.75613pt on input line 440.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 14.25455pt on input line 440.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.25378pt on input line 440.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 13.6799pt on input line 440.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 10.80011pt on input line 440.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 18.0pt on input line 440.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 13.6799pt on input line 440.
-LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
-(Font)              scaled to size 10.80011pt on input line 440.
-! Undefined control sequence.
-<argument> \faicon 
-                   {twitter} @robjhyndman
-l.440 \end{frame}
-                  
+\tf@nav=\write6
+\openout6 = `slides.nav'.
+
+\tf@toc=\write7
+\openout7 = `slides.toc'.
+
+\tf@snm=\write8
+\openout8 = `slides.snm'.
+
+(./slides.aux)
+Package rerunfilecheck Info: File `slides.out' has not changed.
+(rerunfilecheck)             Checksum: C9174EC61C5B6ED931B21AB6FBD1B36C;819.
+ ) 
 Here is how much of TeX's memory you used:
- 28788 strings out of 480313
- 597538 string characters out of 5895527
- 840283 words of memory out of 5000000
- 45660 multiletter control sequences out of 15000+600000
- 775157 words of font info for 331 fonts, out of 8000000 for 9000
+ 30423 strings out of 480313
+ 619895 string characters out of 5895527
+ 859024 words of memory out of 5000000
+ 47218 multiletter control sequences out of 15000+600000
+ 767766 words of font info for 348 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,14n,125p,1827b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawe
+some/fontawesometwo.enc}{c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/f
+onts/enc/dvips/carlito/crlt_z7vml3.enc}{c:/Users/Puwasala/AppData/Roaming/TinyT
+eX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/Puwasala/AppData/Roaming/Ti
+nyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_57h366.enc}{c:/Users/Puwasala/App
+Data/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/Puwasala
+/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.p
+fb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/c
+arlito/Carlito-BoldItalic.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-
+dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb><c:/Users/Puwasala/AppData
+/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb><c:/Users/
+Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/Font
+Awesome.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Puwasala/AppData/Roaming
+/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb><c:/Users/Puwasala/Ap
+pData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/Use
+rs/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
+><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/palatino
+/uplr8a.pfb>
+Output written on slides.pdf (25 pages, 22061928 bytes).
+PDF statistics:
+ 427 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 131222 words of extra memory for PDF output out of 154059 (max. 10000000)
 
-!  ==> Fatal error occurred, no output PDF file produced!

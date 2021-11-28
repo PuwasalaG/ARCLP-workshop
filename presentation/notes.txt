@@ -11,18 +11,12 @@ Notes from Erin
 	- Say technical anomalies - If I say outliers then I mean technical anomalies
 	- Remove outliers scores bubble (or put residuals/outlier scores)
 
-* add flow direction in Figure 1
-
 * Slide-11 
 	- Say gray is down and yellow up
-
-* Slide-12/13
-	- adjust the ylabs (abbreviations)
 
 * Slide-15
 	- change contemporaneous to other water-quality variables
 	- Say I model turbidity always with different sets of predictors
-	- Include the first two columns of the table in the paper
 	- The models that includes AR terms are modeling temporal correlation
 
 * Slide-16

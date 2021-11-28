@@ -1,23 +1,20 @@
 ---
-title:  A framework for detecting anomalies in water-quality variables
-
+title:  "A framework for detecting anomalies in water-quality variables"
 subtitle: Importance of having multiple sensors close to each other
-author: Puwasala Gamakumara
-date: \today
+author: "Puwasala Gamakumara"
+date: "ARCLP Workshop"
 classoption: compress
 toc: true
 header-includes:
-  \usepackage{amsmath, nccmath, graphicx}
-  \usepackage{bm}
-  \usepackage{mathpazo}
-  \usepackage{booktabs}
 output: 
   binb::monash:
     fig_width: 8
     fig_height: 6
+    colortheme: monashwhite
+    keep_tex: yes
+    includes:
+      in_header: header.tex
 ---
-
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, 
@@ -54,16 +51,12 @@ read_chunk(here::here("presentation",
 - Developing statistical tools to detect anomalies in water-quality variables measured by in-situ sensors
 - Extend to utilising information from multiple sensors
 
-## Why multiple sensors?
-
-- Single sensor may not be able to detect certain type of anomalies
-- If the sensors are malfunctioning, then the covariates or lagged values of them may be incorrect
 
 # Framework
 
 ## Anomaly detection framework
 
-*An anomaly is an observation that has an unexpectedly low conditional distribution*
+*An anomaly is an observation that has an unexpectedly low conditional density*
 
 ```{r framework, echo=FALSE, fig.width=6, fig.height=4}
 
@@ -120,8 +113,9 @@ knitr::include_graphics('plots/Pringle-creek-map.pdf')
 
 ## Modeling downstream turbidity
 
+\small
 \begin{equation*}\label{eq:gam_main}
-y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
+turbidity\_down_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(turbidity\_down_{t-j}) + \varepsilon_t
 \end{equation*}
 
 ### Choices for $z_{i,t_l}$
@@ -133,20 +127,25 @@ y_t = \phi_0 + \sum_{i=1}^pg_i(z_{i,t_l}) + \sum_{j=1}^qh_j(y_{t-j}) + r_t
 
 ```{r}
 params <- data.frame(
-  method = c("GAM-up-AR", "GAM-up", "GAM-down", "GAM-up-down", 
-             "GAM-down-AR"),
-  Predictors = c("turbidity(up), conductance(up), level(up),
-                 temperature(up), lagged responses",
-                 "turbidity(up), conductance(up), level(up),
-                 temperature(up), dissolved oxygen(up)",
-                 "conductance(down), level(down), temperature(down),
-                 dissolved oxygen(down)",
-                 "turbidity(up), conductance(up), level(up),
-                 temperature(up),dissolved oxygen(up),conductance(down),
-                 temperature(down)",
-                 "conductance(down), dissolved oxygen(down),
-                 level(down), temperature(down), lagged response"
-  ))
+  Model = c("GAM-down", "GAM-down-AR", "GAM-up", "GAM-up-AR", "GAM-up-down"),
+  Predictors = c("other downstream variables",
+                 "other downstream variables + lagged responses",
+                 "upstream variables",
+                 "upstream variables + lagged responses",
+                 "upstream variables + downstream variables"))
+  
+  # Predictors = c("turbidity(up), conductance(up), level(up),
+  #                temperature(up), ",
+  #                "turbidity(up), conductance(up), level(up),
+  #                temperature(up), dissolved oxygen(up)",
+  #                "conductance(down), level(down), temperature(down),
+  #                dissolved oxygen(down)",
+  #                "turbidity(up), conductance(up), level(up),
+  #                temperature(up),dissolved oxygen(up),conductance(down),
+  #                temperature(down)",
+  #                "conductance(down), dissolved oxygen(down),
+  #                level(down), temperature(down), lagged response"
+  # ))
 
 params %>%
   kableExtra::kbl(format = "latex", booktabs = T,
@@ -233,7 +232,6 @@ knitr::include_graphics('plots/vis_dt.pdf')
 
 ```
 
----
 
 # Evaluation
 
@@ -280,27 +278,22 @@ knitr::include_graphics('plots/vis_dt.pdf')
 
 
 
-<!-- ## More information -->
-<!-- \fontsize{18}{20}\sf -->
 
-<!-- \vspace*{1cm} -->
+\begin{center}
+\Huge \emph{Thank You!}
+\end{center}
 
-<!-- \begin{block}{} -->
-<!-- \url{robjhyndman.com/seminars/gratis/} -->
-<!-- \end{block} -->
+\begin{block}{}
+Slides: \textcolor{blue}{\url{https://github.com/PuwasalaG/ARCLP-workshop/tree/main/presentation}}
+\vspace*{1cm}
 
-<!-- \begin{textblock}{8}(4.4,5.2) -->
-<!-- \begin{alertblock}{Find me at ...} -->
-<!-- \href{https://twitter.com/robjhyndman}{\faicon{twitter} @robjhyndman} -->
+\href{https://github.com/PuwasalaG}{\faicon{github}  @PuwasalaG}
 
-<!-- \href{https://github.com/robjhyndman}{\faicon{github}  @robjhyndman} -->
+\href{mailto:puwasala.gamakumara@gmail.com}{\faicon{envelope}  puwasala.gamakumara@gmail.com}
+\end{block}
 
-<!-- \href{https://robjhyndman.com}{\faicon{home} robjhyndman.com} -->
 
-<!-- \href{mailto:rob.hyndman@monash.edu}{\faicon{envelope}  rob.hyndman@monash.edu} -->
-<!-- \end{alertblock} -->
-<!-- \end{textblock} -->
-<!-- \vspace*{10cm} -->
+
 
 
 
