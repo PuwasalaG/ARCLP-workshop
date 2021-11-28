@@ -1,0 +1,48 @@
+---
+title: "SPOT algorithm"
+output:
+  pdf_document: default
+  html_document: default
+header-includes: 
+  \usepackage{amsmath}
+  \usepackage{bm}
+  \usepackage{mathpazo}
+  \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Using SPOT to detect anomalies in the residuals.
+
+\begin{algorithm}[htb] \label{SPOT_algo}
+\DontPrintSemicolon
+\SetAlgoLined
+\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+\Input{$\{r_1,\dots,r_T\}$, $n, \alpha,$ and $p_u$}
+\Output{Flagged residuals}
+\BlankLine
+Using $\bm{r}_n = |r_1|,\dots,|r_n|$, compute $u$ as the $p_u*100\%^\text{th}$ percentile\;
+Using POT approach, fit a GPD to the excesses over $u$ to estimate 
+$\xi$ and $\sigma$\;
+Compute $\tau_{\alpha}$ as the $(1-\alpha)*100\%^\text{th}$ percentile from the fitted GPD with the parameter estimates $\hat{\xi}$ and $\hat{\sigma}$\;
+\If {$|r_i|>\tau_{\alpha}$ for $i = 1,\dots,n$} {
+  Flag $r_i$ as an outlier\;
+  Remove $r_i$ from $\bm{r}_n$, re-calibrate $\tau_{\alpha}$ following steps 2 and 3 \;
+  } 
+\BlankLine
+\For{$i>n$}{
+    \uIf{$|r_i|>\tau_{\alpha}$}{
+        Flag $r_i$ as an outlier
+    }\uElseIf{$|r_i|>u$}{
+        Flag $r_i$ as a typical point\;
+        Add $|r_i|$ to $\bm{r}_n$\;
+        Estimate the GPD parameters $\xi, \sigma$\;
+        Compute $\tau_{\alpha}$\;
+    }\Else{
+      Flag $r_i$ as a typical point\;
+    }
+}
+\caption{SPOT algorithm}
+\end{algorithm}

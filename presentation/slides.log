@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.24)  28 NOV 2021 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.24)  28 NOV 2021 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,7 +1158,8 @@ kend-pdftex.def
 File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count352
 \l__pdf_internal_box=\box84
-) (./slides.aux)
+)
+No file slides.aux.
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 185.
@@ -1244,7 +1245,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 185.
 LaTeX Info: Redefining \pageref on input line 185.
 LaTeX Info: Redefining \nameref on input line 185.
-(./slides.out) (./slides.out)
 \@outlinefile=\write5
 \openout5 = `slides.out'.
 
@@ -1352,12 +1352,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Carlito-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./slides.nav)
+No file slides.nav.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 185.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 185.
-<Title-page.jpg, id=41, 2726.185pt x 1816.7875pt>
+<Title-page.jpg, id=13, 2726.185pt x 1816.7875pt>
 File: Title-page.jpg Graphic file (type jpg)
 <use Title-page.jpg>
 Package pdftex.def Info: Title-page.jpg  used on input line 190.
@@ -1369,17 +1369,19 @@ LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
 [1
 
 {c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pd
-ftex.map} <./Title-page.jpg>] (./slides.toc
+ftex.map} <./Title-page.jpg>]
+No file slides.toc.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 1.
-)
+(Font)              scaled to size 17.28pt on input line 197.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 197.
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/n' will be
 (Font)              scaled to size 4.0pt on input line 197.
 [2
 
-] (./slides.toc) [3
+]
+No file slides.toc.
+[3
 
 ]
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/n' will be
@@ -1390,23 +1392,25 @@ Overfull \vbox (1.78645pt too high) detected at line 225
 
 [4
 
-] (./slides.toc) [5
+]
+No file slides.toc.
+[5
 
 ]
 LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
 (Font)              scaled to size 14.4pt on input line 236.
 
 
-pdfTeX warning: pdflatex.exe (file c:/Puwasala/ARCLP-workshop/presentation/plot
-s/Framework.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
-1.5> allowed
-<C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf, id=100, 963.6pt x
- 542.025pt>
-File: C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf Graphic file 
-(type pdf)
-<use C:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf>
-Package pdftex.def Info: C:/Puwasala/ARCLP-workshop/presentation/plots/Framewor
-k.pdf  used on input line 236.
+pdfTeX warning: pdflatex.exe (file c:/Puwasala/PostDoc/ARCLP-workshop/presentat
+ion/plots/Framework.pdf): PDF inclusion: found PDF version <1.7>, but at most v
+ersion <1.5> allowed
+<C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf, id=48, 96
+3.6pt x 542.025pt>
+File: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf Graph
+ic file (type pdf)
+<use C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>
+Package pdftex.def Info: C:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/
+Framework.pdf  used on input line 236.
 (pdftex.def)             Requested size: 307.78487pt x 173.12898pt.
 
 Overfull \vbox (19.88696pt too high) detected at line 236
@@ -1414,14 +1418,15 @@ Overfull \vbox (19.88696pt too high) detected at line 236
 
 [6
 
- <c:/Puwasala/ARCLP-workshop/presentation/plots/Framework.pdf>] (./slides.toc) 
+ <c:/Puwasala/PostDoc/ARCLP-workshop/presentation/plots/Framework.pdf>]
+No file slides.toc.
 [7
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./plots/Pringle-creek-map.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<plots/Pringle-creek-map.pdf, id=144, 963.6pt x 542.025pt>
+<plots/Pringle-creek-map.pdf, id=86, 963.6pt x 542.025pt>
 File: plots/Pringle-creek-map.pdf Graphic file (type pdf)
 <use plots/Pringle-creek-map.pdf>
 Package pdftex.def Info: plots/Pringle-creek-map.pdf  used on input line 246.
@@ -1539,7 +1544,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-TLF/m/it' will be
 [9
 
 ]
-<slides_files/figure-beamer/tsplots-1.pdf, id=165, 578.16pt x 433.62pt>
+<slides_files/figure-beamer/tsplots-1.pdf, id=107, 578.16pt x 433.62pt>
 File: slides_files/figure-beamer/tsplots-1.pdf Graphic file (type pdf)
 <use slides_files/figure-beamer/tsplots-1.pdf>
 Package pdftex.def Info: slides_files/figure-beamer/tsplots-1.pdf  used on inpu
@@ -1548,7 +1553,7 @@ t line 266.
 [10
 
  <./slides_files/figure-beamer/tsplots-1.pdf>]
-<slides_files/figure-beamer/turbdown-down-plot-1.pdf, id=178, 578.16pt x 433.62
+<slides_files/figure-beamer/turbdown-down-plot-1.pdf, id=120, 578.16pt x 433.62
 pt>
 File: slides_files/figure-beamer/turbdown-down-plot-1.pdf Graphic file (type pd
 f)
@@ -1559,7 +1564,7 @@ sed on input line 273.
 [11
 
  <./slides_files/figure-beamer/turbdown-down-plot-1.pdf>]
-<slides_files/figure-beamer/turbdown-up-plot-1.pdf, id=195, 578.16pt x 433.62pt
+<slides_files/figure-beamer/turbdown-up-plot-1.pdf, id=137, 578.16pt x 433.62pt
 >
 File: slides_files/figure-beamer/turbdown-up-plot-1.pdf Graphic file (type pdf)
 
@@ -1569,7 +1574,9 @@ d on input line 280.
 (pdftex.def)             Requested size: 259.74614pt x 194.8096pt.
 [12
 
- <./slides_files/figure-beamer/turbdown-up-plot-1.pdf>] (./slides.toc) [13
+ <./slides_files/figure-beamer/turbdown-up-plot-1.pdf>]
+No file slides.toc.
+[13
 
 ]
 LaTeX Font Info:    Font shape `OT1/Carlito-TLF/m/n' will be
@@ -1655,7 +1662,7 @@ LaTeX Font Info:    Font shape `T1/Carlito-TLF/b/it' will be
 ] [16
 
 ]
-<plots/plot_ccf_dt_pval.pdf, id=252, 435.6275pt x 211.79124pt>
+<plots/plot_ccf_dt_pval.pdf, id=190, 435.6275pt x 211.79124pt>
 File: plots/plot_ccf_dt_pval.pdf Graphic file (type pdf)
 <use plots/plot_ccf_dt_pval.pdf>
 Package pdftex.def Info: plots/plot_ccf_dt_pval.pdf  used on input line 368.
@@ -1663,17 +1670,19 @@ Package pdftex.def Info: plots/plot_ccf_dt_pval.pdf  used on input line 368.
 [17
 
  <./plots/plot_ccf_dt_pval.pdf>]
-<plots/vis_dt.pdf, id=264, 434.62375pt x 226.8475pt>
+<plots/vis_dt.pdf, id=202, 434.62375pt x 226.8475pt>
 File: plots/vis_dt.pdf Graphic file (type pdf)
 <use plots/vis_dt.pdf>
 Package pdftex.def Info: plots/vis_dt.pdf  used on input line 372.
 (pdftex.def)             Requested size: 307.81572pt x 160.66132pt.
 [18
 
- <./plots/vis_dt.pdf>] (./slides.toc) [19
+ <./plots/vis_dt.pdf>]
+No file slides.toc.
+[19
 
 ]
-<slides_files/figure-beamer/classification-all-models-1.pdf, id=293, 578.16pt x
+<slides_files/figure-beamer/classification-all-models-1.pdf, id=225, 578.16pt x
  578.16pt>
 File: slides_files/figure-beamer/classification-all-models-1.pdf Graphic file (
 type pdf)
@@ -1687,7 +1696,8 @@ Overfull \vbox (20.45209pt too high) detected at line 381
 
 [20
 
- <./slides_files/figure-beamer/classification-all-models-1.pdf>] (./slides.toc)
+ <./slides_files/figure-beamer/classification-all-models-1.pdf>]
+No file slides.toc.
 [21
 
 ]
@@ -1707,7 +1717,9 @@ Overfull \vbox (37.19473pt too high) detected at line 409
 
 [22
 
-] (./slides.toc) [23
+]
+No file slides.toc.
+[23
 
 ] [24
 
@@ -1725,51 +1737,22 @@ File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 ) [25
 
 ]
-\tf@nav=\write6
-\openout6 = `slides.nav'.
 
-\tf@toc=\write7
-\openout7 = `slides.toc'.
+! LaTeX Error: Environment algorithm undefined.
 
-\tf@snm=\write8
-\openout8 = `slides.snm'.
-
-(./slides.aux)
-Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: C9174EC61C5B6ED931B21AB6FBD1B36C;819.
- ) 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.479 \end{frame}
+                  
 Here is how much of TeX's memory you used:
- 30423 strings out of 480313
- 619895 string characters out of 5895527
- 859024 words of memory out of 5000000
- 47218 multiletter control sequences out of 15000+600000
- 767766 words of font info for 348 fonts, out of 8000000 for 9000
+ 30287 strings out of 480313
+ 618110 string characters out of 5895527
+ 858891 words of memory out of 5000000
+ 47113 multiletter control sequences out of 15000+600000
+ 767134 words of font info for 345 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,14n,125p,1827b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/fontawe
-some/fontawesometwo.enc}{c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/f
-onts/enc/dvips/carlito/crlt_z7vml3.enc}{c:/Users/Puwasala/AppData/Roaming/TinyT
-eX/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Users/Puwasala/AppData/Roaming/Ti
-nyTeX/texmf-dist/fonts/enc/dvips/carlito/crlt_57h366.enc}{c:/Users/Puwasala/App
-Data/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Users/Puwasala
-/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito-Bold.p
-fb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/c
-arlito/Carlito-BoldItalic.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-
-dist/fonts/type1/typoland/carlito/Carlito-Italic.pfb><c:/Users/Puwasala/AppData
-/Roaming/TinyTeX/texmf-dist/fonts/type1/typoland/carlito/Carlito.pfb><c:/Users/
-Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/fontawesome/Font
-Awesome.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/Users/Puwasala/AppData/Roaming
-/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb><c:/Users/Puwasala/Ap
-pData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/Use
-rs/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
-><c:/Users/Puwasala/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/palatino
-/uplr8a.pfb>
-Output written on slides.pdf (25 pages, 22061928 bytes).
-PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 349 compressed objects within 4 object streams
- 77 named destinations out of 1000 (max. 500000)
- 131222 words of extra memory for PDF output out of 154059 (max. 10000000)
 
+!  ==> Fatal error occurred, no output PDF file produced!
