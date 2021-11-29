@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 
 library(tidyverse)
 library(lubridate)
-library(conduits)
 library(mgcv)
 ```
 
@@ -114,14 +113,15 @@ data_downstream %>%
 
 We choose level, temperature, conductance and dissolved oxygen to model the downstream turbidity. We impute any missing values in the predictors prior to the analysis. I have used a Kalman filter based on ARIMA state-space model for imputation. The codes for this can be found here [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/missing_value_imputation.R] 
 
-First divide the data into training set (01-Oct-2019 to 30-Nov-2019) and test set (01-Dec-2019 to 31-Dec-2019). We use the training set to train the model. We remove all any technical anomalies we identified as the model needs to be trained on a cleaned dataset. 
+First divide the data into training set (01-Oct-2019 to 30-Nov-2019) and test set (01-Dec-2019 to 31-Dec-2019). We use the training set to train the model. We remove any technical anomalies we identified as the model needs to be trained on a cleaned dataset. 
 
 We fit the model on the log scale of turbidity as the data are very skewed.
 ```{r prepare-data-downstream}
-
+# loading imputed data
 load(here::here("code-sharing", "data", 
                 "data_downstream_imputed.rda"))
 
+# transformation and lag computation of the response
 data_downstream_imputed <- data_downstream_imputed %>% 
   select(-turbidity_downstream) %>% 
   left_join(Turbidity_down) %>% 
@@ -183,6 +183,7 @@ data_residuals <- data_downstream_imputed%>%
                                           TRUE ~ as.character(NA)))
 
 ```
+
 
 Using SPOT to detect anomalies in the residuals. See the function for SPOT here [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/SPOT_algorithm.R]
 
@@ -298,17 +299,29 @@ classif_plot_turb_down_AR / classif_plot_resid_down_AR
 This model correctly classifies all true technical anomalies. 
 However, there are considerable amount of False Positives too. 
 
+
+
 # Using multiple sensor data
 
 Suppose we have a flow connected sensor upstream. That is water flows through upstream sensor to the downstream sensor. We can use data from that sensor to predict downstream turbidity series.
 
-We first have to calculate the lag time between the two sensor locations (i.e. the time it takes water to flow from upstream to downstream sensor). We find this lag time by maximising the conditional cross-correlation between the two sensors. 
+We first have to calculate the lag time between the two sensor locations (i.e. the time it takes water to flow from upstream to downstream sensor). We find this lag time by maximising the conditional cross-correlation between the two sensors.
+
 
 ## Lag time estimation
 
 In this application we choose to use turbidity from upstream and downstream sensors to calculate the cross-correlations conditional on upstream water level and temperature. 
 
 We first have to use a cleaned data set to compute the models. If necessary we also impute missing values. Please refer [https://github.com/PuwasalaG/ARCLP-workshop/blob/main/code-sharing/src/missing_value_imputation.R] to see missing value imputation of each series.
+
+
+Install `conduits` package
+
+```{r install-conduits}
+# install.packages("devtools")
+devtools::install_github("PuwasalaG/conduits")
+```
+
 
 
 ```{r prep_data_lag_estim}
@@ -334,12 +347,16 @@ data_lag_estim <- data_xz %>%
 ```
 
 
+
 ```{r Conditional-cross-correlation}
+
+# Setting degrees of freedom for smoothing parameters
 mean <- c(5,5)
 variance <- c(4,4)
 correlation <- c(3,3)
 
 # we choose level and temperature for lag time estimation in this analysis
+?conduits::conditional_moments
 ?conduits::conditional_ccf
 
 cond_ccf <- data_lag_estim %>%
@@ -353,6 +370,8 @@ cond_ccf <- data_lag_estim %>%
                             knots_variance = list(x = variance, 
                                                   y = variance),
                             df_correlation = correlation)
+
+?autoplot.conditional_ccf
 
 autoplot(cond_ccf, type = "mean")
 autoplot(cond_ccf, type = "cross-correlation", k=2)
@@ -447,6 +466,7 @@ data_upstream_new_dt <- data_upstream_new %>%
 data_lagged_upstream <- data_upstream_new_dt %>% 
   select(-turbidity_downstream)
 
+head(data_upstream_new_dt)
 ```
 
 ## Anomaly detection in downstream turbidity using upstream data
