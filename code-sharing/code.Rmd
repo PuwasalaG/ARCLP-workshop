@@ -22,6 +22,8 @@ library(mgcv)
 
 # Data
 
+We use Pringle Creek data from NEON [https://data.neonscience.org/data-products] 
+
 ```{r load}
 
 load(here::here("code-sharing", "data", "PRIN_5min_cleaned.rda"))
@@ -347,6 +349,33 @@ data_lag_estim <- data_xz %>%
 ```
 
 
+Let $x_t:$ Turbidity upstream, $y_t:$ Turbidity downstream and $\bm{z}_t:$ {level upstream, temperature upstream}
+
+$x^*_t = \frac{x_t - \text{E}[x_t|\bm{z}_t]}{\sqrt{\text{V}[x_t|\bm{z}_t]}}$ and
+$y^*_t = \frac{y_t - \text{E}[y_t|\bm{z}_t]}{\sqrt{\text{V}[y_t|\bm{z}_t]}}$
+
+$$
+r_k(\bm{z}_t) = \text{E}[x_t^*y^*_{t+k}|\bm{z}_t] \quad \text{for} \quad k = 1,2,...
+$$
+
+To estimate $r_k(\bm{z}_t)$ we fit the following GAMs
+
+Let $x_t^*y^*_{t+k}|\bm{z}_t \sim \text{N}(r_k(\bm{z}_t), \sigma_r^2)$,
+
+$$
+g(r_k(\bm{z}_t)) = \gamma_0 + \sum_{i=1}^p h_i(z_{i,t}) + \varepsilon_t
+$$
+
+
+$$
+\hat{r}_k(\bm{z}_t) = g^{-1}( \hat{\gamma}_0 + \sum_{i=1}^p \hat{h}_i(z_{i,t}))
+$$
+
+### Estimating time delay
+
+$$
+\hat{d}_{t}(\bm{z}_t) = \underset{k}{\operatorname{argmax}}\quad \hat{r}_{k}(\bm{z}_t)
+$$
 
 ```{r Conditional-cross-correlation}
 
@@ -380,8 +409,9 @@ autoplot(cond_ccf, type = "cross-correlation", k=2)
 ```{r estimate_dt}
 ?conduits::estimate_dt
 
+
 Estimate_dt <- cond_ccf %>% 
-  estimate_dt(new_data = data_lag_estim, k_min = 1, 
+  conduits::estimate_dt(new_data = data_lag_estim, k_min = 1, 
               k_max = 24)
 
 Estimate_dt$data_dt
@@ -455,7 +485,7 @@ data_upstream_new <- list(data_upstream_imputed, data_dt) %>%
 ?map_lags
 
 data_upstream_new_dt <- data_upstream_new %>% 
-  map_lags(up = c(level_upstream, conductance_upstream,
+  conduits::map_lags(up = c(level_upstream, conductance_upstream,
                   dissolved_oxygen_upstream,
                   turbidity_upstream, temperature_upstream,
                   pH_upstream), 
