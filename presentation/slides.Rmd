@@ -36,27 +36,21 @@ read_chunk(here::here("presentation",
                       "scripts", "main_analysis.R"))
 ```
 
-# Introduction
+# Framework
 
-## Water-quality monitoring in river networks
+## Objectives
 
-- Low-cost in-situ sensors
-
-- Produce high-frequency data
-
-- Prone to errors due to miscalibration, biofouling, battery and technical errors
+\textcolor{blue}{\emph{An anomaly is an observation that has an unexpectedly low conditional density}}
 
 ### Objective
 
-- Developing statistical tools to detect anomalies in water-quality variables measured by in-situ sensors
-- Extend to utilising information from multiple sensors
+- Developing statistical tools to detect technical anomalies in water-quality variables measured by in-situ sensors
+- Utilising temporal correlation and information from multiple sensors
 
 
-# Framework
+## Proposed framework
 
-## Anomaly detection framework
 
-*An anomaly is an observation that has an unexpectedly low conditional density*
 
 ```{r framework, echo=FALSE, fig.width=6, fig.height=4}
 
@@ -206,6 +200,8 @@ knitr::include_graphics('plots/plot_ccf_dt_pval.pdf')
 ```
 
 ---
+
+## Estimated lag time vs upstream predictors
 
 ```{r vis_dt, out.width="100%"}
 
